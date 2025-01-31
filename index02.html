@@ -35,6 +35,69 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     
+
+<style>
+    .swiper-container {
+        padding-bottom: 20px;
+    }
+
+    .card {
+        height: 300px;
+        border-radius: 15px;
+        overflow: hidden;
+        position: relative;
+        color: white;
+    }
+
+    .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        /* Dark overlay for better text visibility */
+    }
+
+    .card .card-body {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        z-index: 2;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+    /* -------stepper----------------- */
+    .step-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .step-container::after {
+            content: "\f061"; /* Unicode for Font Awesome right arrow */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 20px;
+            color: #3d8de9;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Remove arrow from the last step */
+        .step-container:last-child::after {
+            content: "";
+        }
+</style>
    
 </head>
 
@@ -83,9 +146,9 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
         <a href="" class="navbar-brand d-flex align-items-center p-0">
-            <img src="img/logo-removebg.png" class="border border-dark rounded-circle"  alt="Logo" 
-            style="height: 100px; width: 100px; margin-right: 10px; background-color: rgb(199, 198, 187);">
-            <h3 class="mb-0" style="color: rgb(246, 249, 253);">Lanka Discoveries</h3>
+            <img src="img/logoWithName-removebg-preview.png"  alt="Logo" 
+            style="border-radius: 150px; height: 175px; width: 250px; margin-right: 10px;">
+            <!-- <h3 class="mb-0" style="color: rgb(23, 23, 24);">Lanka Discoveries</h3> -->
 
             <!-- <img src="img/Olankalogo.webp" alt="Logo" 
                         style="height: 50; width: 50; margin-right: 10px; background-color: white">
@@ -208,44 +271,167 @@
 <div class="container my-5" style="background-color: #f4fbf5; padding: 40px; border-radius: 10px;">
     <div class="text-center">
         <h2><strong>How</strong> It Works</h2>
-        <div class="row mt-4 position-relative">
-            <div class="col-md-3 text-center" style="position: relative;">
+        <div class="row mt-4 position-relative justify-content-center">
+            <div class="col-md-3 text-center step-container">
                 <span style="font-weight: bold;">01</span>
                 <div
-                    style="width: 60px; height: 60px; background-color: #28a745; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-envelope"></i>
+                    style="width: 90px; height: 90px; background-color: #3d8de9; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                    <i class="fas fa-envelope fa-2x"></i>
                 </div>
                 <p style="font-weight: bold; margin-top: 10px;">Submit Your Details</p>
             </div>
-            <div class="col-md-3 text-center">
+
+            <div class="col-md-3 text-center step-container">
                 <span style="font-weight: bold;">02</span>
                 <div
-                    style="width: 60px; height: 60px; background-color: #28a745; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-users"></i>
+                    style="width: 90px; height: 90px; background-color:#3d8de9; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                    <i class="fas fa-users fa-2x"></i>
                 </div>
                 <p style="font-weight: bold; margin-top: 10px;">Connect with a Local Expert Online</p>
             </div>
-            <div class="col-md-3 text-center">
+
+            <div class="col-md-3 text-center step-container">
                 <span style="font-weight: bold;">03</span>
                 <div
-                    style="width: 60px; height: 60px; background-color: #28a745; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-file-alt"></i>
+                    style="width: 90px; height: 90px; background-color: #3d8de9; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                    <i class="fas fa-file-alt fa-2x"></i>
                 </div>
-                <p style="font-weight: bold; margin-top: 10px;">Receive 3 Personalised Travel Quotes</p>
+                <p style="font-weight: bold; margin-top: 10px;">Receive 3 Personalized Travel Quotes</p>
             </div>
-            <div class="col-md-3 text-center">
-                <span style="font-weight: bold;" >04</span>
+
+            <div class="col-md-3 text-center step-container">
+                <span style="font-weight: bold;">04</span>
                 <div
-                    style="width: 60px; height: 60px; background-color: #28a745; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-suitcase"></i>
+                    style="width: 90px; height: 90px; background-color: #3d8de9; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                    <i class="fas fa-suitcase fa-2x"></i>
                 </div>
                 <p style="font-weight: bold; margin-top: 10px;">Secure Your Booking</p>
             </div>
         </div>
     </div>
-</div>
+</div>>
 
 <!-- Stepper Area  end-->
+
+<hr>
+
+<!-- Places card area start -->
+
+<div class="container-xxl py-5">
+    <div class="container">
+
+        <div class="row g-5">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h1 class="mb-3 text-start">
+                        <span style="color: rgb(11, 106, 214);">Trending</span> Destination
+                    </h1>
+                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                        Explore More
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    <div class="row g-5 mt-3">
+        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="20"
+            slides-per-view="3" autoplay-delay="3500" loop="true"
+            breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'>
+    
+            <swiper-slide>
+                <div class="card"
+                    style="background-image: url('img/Segiriya.jpeg'); background-size: cover; 
+                    background-position: center; width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">Sigiriya</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+    
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/argambay.jpeg') center/cover; 
+                    background-size: cover; background-position: center;width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">ArugamBay</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+    
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/Beach.jpeg') center/cover; background-size: cover; 
+                    background-position: center; width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">Hikkaduwa</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+    
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/Ella\ _\ Sri\ Lanka.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">Ella</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/Sera_Ella.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">Sera Ella</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/pagoda2.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;" class="card-title">Katharagama</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card"
+                    style="background: url('img/pagoda.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                    <div class="card-body">
+                        <h5 style="color: white;"  class="card-title">Anuradhapura</h5>
+                        <p class="card-text">150+ Tours</p>
+                        <p class="card-text">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+    
+        </swiper-container>
+    </div>
+    
+    </div>
+</div>
+
+<!-- Places card area end -->
+
 
 <hr>
 <!-- Why Choose us start -->
@@ -483,55 +669,215 @@
 
         <div class="row g-5 mt-4">
             <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="row no-gutters">
+                <div class="row no-gutters justify-content-center">
         
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-                <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="2"
-                        class="purecounter"></span>
-                    <p><strong>Destination Experts</strong></p>
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="count-box text-center"
+                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+        
+                            <i class="bi bi-journal-richtext" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
+        
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100"
+                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
+        
+                            <p style="font-size: 18px; margin-top: 5px;"><strong>Destination Experts</strong></p>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                        <div class="count-box text-center"
+                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+        
+                            <i class="bi bi-headset" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
+        
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20"
+                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
+        
+                            <p style="font-size: 18px; margin-top: 5px;"><strong>Destinations</strong></p>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="count-box text-center"
+                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+        
+                            <i class="bi bi-people" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
+        
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
+                                data-purecounter-duration="1" style="font-size: 30px; font-weight: bold; color: #333;"></span>
+        
+                            <p style="font-size: 18px; margin-top: 5px;"><strong>Different Tours</strong></p>
+                        </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="count-box text-center"
+                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+        
+                            <i class="bi bi-emoji-smile" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
+        
+                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10000"
+                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
+        
+                            <p style="font-size: 18px; margin-top: 5px;"><strong>Trusted Customers</strong></p>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
-        
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="count-box">
-                    <i class="bi bi-headset"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2"
-                        class="purecounter hours-support"></span>
-                    <p><strong>Destinations</strong></p>
-                </div>
-            </div>
-        
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="count-box">
-                    <i class="bi bi-people"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
-                        class="purecounter error-reduction"></span>
-                    <p><strong>Different tours</strong></p>
-                </div>
-            </div>
-        
-            <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="10000" data-purecounter-duration="2"
-                        class="purecounter happy-client-counter"></span>
-                    <p><strong>Trusted customers</strong></p>
-                </div>
-            </div>
-        
         </div>
-                
+   
+         <div class="row g-5 mt-3">
+        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="d-flex align-items-center mb-3">
+                <div>
+                    <h1 class="mb-3"><span style="color: rgb(11, 106, 214);">People</span> Say</h1>
+                    <p class="mb-2">Check out what our clients loved about their vacations.
+                        Collected via their online reviews and success stories</p>
+                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                        Success Stories
+                    </a>
+
+                    <!-- Count-boxes for the Stats -->
+                    <div class="row g-4 mt-4 justify-content-bottom">
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                            <div class="count-box text-center"
+                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+    
+                                <i class="bi bi-journal-richtext"
+                                    style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+    
+                                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100"
+                                    data-purecounter-duration="2"
+                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
+    
+                                <p style="font-size: 16px; margin-top: 5px;"><strong>Destination Experts</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                            <div class="count-box text-center"
+                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+    
+                                <i class="bi bi-people" style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+    
+                                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
+                                    data-purecounter-duration="1"
+                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
+    
+                                <p style="font-size: 16px; margin-top: 5px;"><strong>Different Tours</strong></p>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                            <div class="count-box text-center"
+                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+    
+                                <i class="bi bi-emoji-smile"
+                                    style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
+    
+                                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10000"
+                                    data-purecounter-duration="2"
+                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
+    
+                                <p style="font-size: 16px; margin-top: 5px;"><strong>Trusted Customers</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    
+        <!-- Image Section -->
+    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="d-flex align-items-center">
+    <swiper-container class="mySwiper" style="width: 100%; height: 800px;"
+        autoplay="true" 
+    a   utoplay-delay="5000"
+        loop="true" 
+        space-between="30" 
+        slides-per-view="1" 
+        effect="slide">
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                            background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                            background-position: center; width: 100%; height: 100%; margin: auto;">
+                    <div class="card-body">
+                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                        <p class="card-text" style="color: white;">150+ Tours</p>
+                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                    </div>
+                </div>
+            </swiper-slide>
+
+            </swiper-container>
+        </div>
+    </div>
+
+        </div>
+
     </div>
 </div>
 
 <!-- Our Success end -->
 
     <!-- Service Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
@@ -612,12 +958,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Service End -->
-
+<hr>
 
     <!-- Destination Start -->
-    <div class="container-xxl py-5 destination">
+    <!-- <div class="container-xxl py-5 destination">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Destination</h6>
@@ -670,7 +1016,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Destination Start -->
 
 
@@ -1122,8 +1468,12 @@
     <!-- JavaScript Libraries -->
 
     
-     
-        <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/yourkit.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
