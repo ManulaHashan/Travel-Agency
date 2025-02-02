@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>Lanka Discoveries | Home</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -18,6 +18,8 @@
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
         rel="stylesheet">
 
+       
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -27,6 +29,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
+    <link src="./js/jQuery-Plugin-For-Multi-Select-List-with-Checkboxes-MultiSelect/jquery.multiselect.css" />
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -97,6 +100,66 @@
         .step-container:last-child::after {
             content: "";
         }
+
+    /* multiple select  */
+    .multi-select-container {
+  display: inline-block;
+  position: relative;
+}
+
+.multi-select-menu {
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  float: left;
+  min-width: 100%;
+  background: #fff;
+  margin: 1em 0;
+  padding: 0.4em 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.multi-select-menu input {
+  margin-right: 0.3em;
+  vertical-align: 0.1em;
+}
+
+.multi-select-button {
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 0.2em 0.6em;
+  max-width: 20em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: -0.5em;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.multi-select-button:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.4em 0.4em 0 0.4em;
+  border-color: #999 transparent transparent transparent;
+  margin-left: 0.4em;
+  vertical-align: 0.1em;
+}
+
+.multi-select-container--open .multi-select-menu { display: block; }
+
+.multi-select-container--open .multi-select-button:after {
+  border-width: 0 0.4em 0.4em 0.4em;
+  border-color: transparent transparent #999 transparent;
+}
 </style>
    
 </head>
@@ -309,7 +372,7 @@
             </div>
         </div>
     </div>
-</div>>
+</div>
 
 <!-- Stepper Area  end-->
 
@@ -687,12 +750,9 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="count-box text-center"
                             style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-        
                             <i class="bi bi-headset" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-        
                             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20"
                                 data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-        
                             <p style="font-size: 18px; margin-top: 5px;"><strong>Destinations</strong></p>
                         </div>
                     </div>
@@ -1166,27 +1226,69 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input"
-                                            id="datetime" placeholder="Date & Time" data-target="#date3"
-                                            data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
+                                        <select class="form-control bg-transparent" id="hotel_type">
+                                            <option>select hotel type</option>
+                                            <option>3 Star</option>
+                                            <option>4 Star</option>
+                                            <option>5 Star</option>
+                                        </select>
+                                        <label for="datetime">Hotel Type</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
+                                        <input type="text" class="form-control bg-transparent"  id="name"
+                                            placeholder="USA">
+                                        <label for="datetime">I'm from</label>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control bg-transparent" id="name"
+                                        placeholder="3">
+                                        <label for="select1">No of Nights</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                
+  <div class="multi-select"
+  style="width: 100%; position: relative; border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
+  <div class="multi-select-header" style="position: relative;">
+    <div onclick="toggleDropdown()" style="display: flex; align-items: center; width: 100%; cursor: pointer;">
+      <input type="text" id="multiSearch" placeholder="Select Destinations" oninput="filterOptions()"
+        style="flex-grow: 1; padding: 5px; border: none; background-color:transparent; outline: none; border-radius: 4px;">
+      <button type="button"
+        style="background: none; border: none; font-size: 16px; cursor: pointer; margin-left: 10px;">&#9660;</button>
+    </div>
+  </div>
+  <div class="multi-select-options" id="optionsList"
+    style="display: none; max-height: 150px; overflow-y: auto; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; position: absolute; width: 100%; z-index: 999;">
+    <div class="multi-select-option" data-value="Ella"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+    Ella &nbsp;</div>
+    <div class="multi-select-option" data-value="Kandy"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Kandy&nbsp; </div>
+    <div class="multi-select-option" data-value="Arugambay"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Arugambay&nbsp;</div>
+    <div class="multi-select-option" data-value="Dambulla"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+    Dambulla&nbsp;</div>
+    <div class="multi-select-option" data-value="Galle"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Galle&nbsp;</div>
+  </div>
+</div>
+
+<div class="selected-options" id="selectedOptions" style="margin-top: 10px;"></div>
+
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-transparent" placeholder="Special Request"
                                             id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
+                                        <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1463,7 +1565,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #0b6ad6;"><i class="bi bi-arrow-up" style="color: #fff;border-radius: 15px;"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -1485,6 +1587,10 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+   
+<script src="./js/jQuery-Plugin-For-Multi-Select-List-with-Checkboxes-MultiSelect/jquery.multi-select.js"></script>
+<script src="./js/jQuery-Plugin-For-Multi-Select-List-with-Checkboxes-MultiSelect/jquery.slim.min.js"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
@@ -1502,6 +1608,115 @@
                 button.textContent = "Show Less";
             }
         });
+
+
+
+
+    // multiple select 
+    // Store selected options
+    let selectedValues = [];
+
+    // Function to handle option selection
+    function toggleOption(option) {
+      const value = option.dataset.value;
+      console.log(value)
+      const index = selectedValues.indexOf(value);
+      if (index > -1) {
+        // Remove from selected values if already selected
+        selectedValues.splice(index, 1);
+        option.style.backgroundColor = '#f0f0f0'; // Reset background color
+      } else {
+        // Add to selected values
+        selectedValues.push(value);
+        option.style.backgroundColor = '#f6f6f6'; // Set background color for selected
+        option.style.color = '#000'; 
+      }
+      updateSelectedOptions();
+      closeDropdown(); // Close dropdown after selecting an option
+    }
+
+    // Update the selected options display
+    function updateSelectedOptions() {
+  const selectedContainer = document.getElementById('selectedOptions');
+  selectedContainer.innerHTML = '';
+  selectedValues.forEach(value => {
+    const span = document.createElement('span');
+   
+   
+   
+    // Create another span for the value (e.g., Option 1, Option 2, etc.)
+    const valueText = document.createElement('span');
+    valueText.textContent = `${value} `;
+
+     // Create a span for the "Option" word and set its color to red
+     const optionText = document.createElement('span');
+    optionText.textContent = 'X';
+    optionText.style.color = 'red';  // Set the "Option" word to red
+   
+    // Append both spans
+   
+    span.appendChild(valueText);
+    span.appendChild(optionText);
+   
+    span.style.display = 'inline-block';
+    span.style.padding = '5px';
+    span.style.backgroundColor = '#007bff';
+    span.style.color = 'white';  // Keep the value part white
+    span.style.borderRadius = '4px';
+    span.style.margin = '2px';
+    span.style.cursor = 'pointer';
+    span.onclick = () => removeSelectedOption(value);
+    selectedContainer.appendChild(span);
+  });
+}
+    // Remove a selected option
+    function removeSelectedOption(value) {
+      selectedValues = selectedValues.filter(val => val !== value);
+      updateSelectedOptions();
+      const option = document.querySelector(`.multi-select-option[data-value='${value}']`);
+      option.style.backgroundColor = '#f0f0f0'; // Reset background color
+    }
+
+    // Function to filter options based on search input
+    function filterOptions() {
+      const searchQuery = document.getElementById('multiSearch').value.toLowerCase();
+      const options = document.querySelectorAll('.multi-select-option');
+      options.forEach(option => {
+        const text = option.textContent.toLowerCase();
+        if (text.includes(searchQuery)) {
+          option.style.display = 'block';
+        } else {
+          option.style.display = 'none';
+        }
+      });
+    }
+
+    // Function to toggle the dropdown visibility
+    function toggleDropdown() {
+      const dropdown = document.getElementById('optionsList');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Function to close the dropdown
+    function closeDropdown() {
+      const dropdown = document.getElementById('optionsList');
+      dropdown.style.display = 'none';
+    }
+
+    // Attach click event to each option
+    document.querySelectorAll('.multi-select-option').forEach(option => {
+      option.onclick = () => toggleOption(option);
+    });
+
+    // Close the dropdown if the user clicks anywhere outside of the dropdown
+    window.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('optionsList');
+      const multiSelect = document.querySelector('.multi-select');
+      if (!multiSelect.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+       
     </script>
     
     <script>
