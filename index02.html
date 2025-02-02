@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Tourist - Travel Agency HTML Template</title>
+    <title>Lanka Discoveries | Home</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -17,6 +17,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
         rel="stylesheet">
+
+       
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -97,6 +99,66 @@
         .step-container:last-child::after {
             content: "";
         }
+
+    /* multiple select  */
+    .multi-select-container {
+  display: inline-block;
+  position: relative;
+}
+
+.multi-select-menu {
+  position: absolute;
+  left: 0;
+  top: 0.8em;
+  float: left;
+  min-width: 100%;
+  background: #fff;
+  margin: 1em 0;
+  padding: 0.4em 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.multi-select-menu input {
+  margin-right: 0.3em;
+  vertical-align: 0.1em;
+}
+
+.multi-select-button {
+  display: inline-block;
+  font-size: 0.875em;
+  padding: 0.2em 0.6em;
+  max-width: 20em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: -0.5em;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.multi-select-button:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.4em 0.4em 0 0.4em;
+  border-color: #999 transparent transparent transparent;
+  margin-left: 0.4em;
+  vertical-align: 0.1em;
+}
+
+.multi-select-container--open .multi-select-menu { display: block; }
+
+.multi-select-container--open .multi-select-button:after {
+  border-width: 0 0.4em 0.4em 0.4em;
+  border-color: transparent transparent #999 transparent;
+}
 </style>
    
 </head>
@@ -309,7 +371,7 @@
             </div>
         </div>
     </div>
-</div>>
+</div>
 
 <!-- Stepper Area  end-->
 
@@ -687,12 +749,9 @@
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                         <div class="count-box text-center"
                             style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-        
                             <i class="bi bi-headset" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-        
                             <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20"
                                 data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-        
                             <p style="font-size: 18px; margin-top: 5px;"><strong>Destinations</strong></p>
                         </div>
                     </div>
@@ -740,7 +799,7 @@
 
                     <!-- Count-boxes for the Stats -->
                     <div class="row g-4 mt-4 justify-content-bottom">
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
                             <div class="count-box text-center"
                                 style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
     
@@ -755,7 +814,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                             <div class="count-box text-center"
                                 style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
     
@@ -769,7 +828,7 @@
                             </div>
                         </div>
     
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                             <div class="count-box text-center"
                                 style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
     
@@ -876,91 +935,7 @@
 
 <!-- Our Success end -->
 
-    <!-- Service Start -->
-    <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Services</h6>
-                <h1 class="mb-5">Our Services</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5>WorldWide Tours</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
-                            <h5>Hotel Reservation</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-user text-primary mb-4"></i>
-                            <h5>Travel Guides</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item rounded pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-cog text-primary mb-4"></i>
-                            <h5>Event Management</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Service End -->
-<hr>
+
 
     <!-- Destination Start -->
     <!-- <div class="container-xxl py-5 destination">
@@ -1021,7 +996,7 @@
 
 
     <!-- Package Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Packages</h6>
@@ -1126,24 +1101,109 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Package End -->
-
-
+     <div style="background-color: #f6f6f6;">
+        <div class="container py-5 wow fadeInUp">
+            <div class="text-center mb-5">
+                <h6 style="color: #007bff; font-weight: bold;">Packages</h6>
+                <h1>Awesome Packages</h1>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6 bg">
+                    <div class="p-4 border" style="border-radius: 15px; transition: transform 0.3s ease; height: auto; background-color: #fff; ">
+                        
+                        <span class="badge p-2 mb-2" style="background-color: #fff; color: #000; font-weight: bold;">Best Selling</span>
+                        <h4 >Flexible Individual Travel</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $790 PP</p>
+                        <p style="color:#555;"> Perfect for families who want to travel with privacy, need full flexibility, and have specific requirements.</p>
+                        <ul style="color:#555;">
+                            <li>Private Trip</li>
+                            <li>Fully customised</li>
+                            <li>Private vehicle and driver</li>
+                            <li>Flexibility during travelling</li>
+                        </ul>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> Dedicated Destination Expert</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> 24/7 global care</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> Account Manager</p>
+                        <button class="btn w-100" style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="p-4 border" style="border-radius: 15px; transition: transform 0.3s ease; height: auto; background-color:#fff;">
+                       
+                        <span class="badge p-2 mb-2 " style="background-color: #fff; color: #000; font-weight: bold;">Group Adventure | 20% Off</span>
+                        <h4>Small Group Tours</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $950 PP</p>
+                        <p style="color:#555;">Ideal for those who love travelling in small groups, and have less flexibility during their travels and dates.</p>
+                        <ul style="color:#555;">
+                            <li>Travelling with small groups of up to 16 people</li>
+                            <li>A fixed tour plan and fixed dates</li>
+                            <li>Shared transport</li>
+                            <li>No flexibility during travelling</li>
+                        </ul>
+                        <p style="color:#555;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> Dedicated Destination Expert</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> 24/7 global care</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg> Account Manager</p>
+                        <button class="btn w-100" style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get a Quote</button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="p-4 border" style="border-radius: 15px; transition: transform 0.3s ease; height: auto; background-color:#fff;">
+                        
+                        <span class="badge p-2 mb-2" style="background-color: #fff; color: #000; font-weight: bold;">Ultimate Relaxing | 30% Off</span>
+                        <h4>Holiday Getaways</h4>
+                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $590 PP</p>
+                        <p style="color:#555;">Ideal for those who have flexible travel schedules, seeking discounted getaways, offering reduced prices and shorter travel distances.</p>
+                        <ul style="color:#555;">
+                            <li>Private Trip</li>
+                            <li>Fixed travel period</li>
+                            <li>Private vehicle and driver</li>
+                            <li>Flexibility during travelling</li>
+                            <li>Discounted prices and offers</li>
+                        </ul>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg> Dedicated Destination Expert</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                          </svg> 24/7 global care</p>
+                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                          </svg> Account Manager</p>
+                        <button class="btn w-100" style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get a Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Booking Start -->
+     <br />
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="booking p-5">
+            <div class="booking p-5" style="border-radius: 15px;">
                 <div class="row g-5 align-items-center">
                     <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Booking</h6>
-                        <h1 class="text-white mb-4">Online Booking</h1>
+                        <h6 class="text-white text-uppercase">Get a Quote</h6>
+                        <h1 class="text-white mb-4">Online Reservation</h1>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit.</p>
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
                             dolore erat amet</p>
-                        <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a>
+                        <!-- <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a> -->
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
@@ -1165,31 +1225,73 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <input type="text" class="form-control bg-transparent datetimepicker-input"
-                                            id="datetime" placeholder="Date & Time" data-target="#date3"
-                                            data-toggle="datetimepicker" />
-                                        <label for="datetime">Date & Time</label>
+                                        <select class="form-control bg-transparent" id="hotel_type">
+                                            <option>select hotel type</option>
+                                            <option>3 Star</option>
+                                            <option>4 Star</option>
+                                            <option>5 Star</option>
+                                        </select>
+                                        <label for="datetime">Hotel Type</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <select class="form-select bg-transparent" id="select1">
-                                            <option value="1">Destination 1</option>
-                                            <option value="2">Destination 2</option>
-                                            <option value="3">Destination 3</option>
-                                        </select>
-                                        <label for="select1">Destination</label>
+                                        <input type="text" class="form-control bg-transparent"  id="name"
+                                            placeholder="USA">
+                                        <label for="datetime">I'm from</label>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control bg-transparent" id="name"
+                                        placeholder="3">
+                                        <label for="select1">No of Nights</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                
+  <div class="multi-select"
+  style="width: 100%; position: relative; border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
+  <div class="multi-select-header" style="position: relative;">
+    <div onclick="toggleDropdown()" style="display: flex; align-items: center; width: 100%; cursor: pointer;">
+      <input type="text" id="multiSearch" placeholder="Select Destinations" oninput="filterOptions()"
+        style="flex-grow: 1; padding: 5px; border: none; background-color:transparent; outline: none; border-radius: 4px;">
+      <button type="button"
+        style="background: none; border: none; font-size: 16px; cursor: pointer; margin-left: 10px;">&#9660;</button>
+    </div>
+  </div>
+  <div class="multi-select-options" id="optionsList"
+    style="display: none; max-height: 150px; overflow-y: auto; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; position: absolute; width: 100%; z-index: 999;">
+    <div class="multi-select-option" data-value="Ella"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+    Ella &nbsp;</div>
+    <div class="multi-select-option" data-value="Kandy"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Kandy&nbsp; </div>
+    <div class="multi-select-option" data-value="Arugambay"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Arugambay&nbsp;</div>
+    <div class="multi-select-option" data-value="Dambulla"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+    Dambulla&nbsp;</div>
+    <div class="multi-select-option" data-value="Galle"
+      style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
+      Galle&nbsp;</div>
+  </div>
+</div>
+
+<div class="selected-options" id="selectedOptions" style="margin-top: 10px;"></div>
+
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
                                         <textarea class="form-control bg-transparent" placeholder="Special Request"
                                             id="message" style="height: 100px"></textarea>
-                                        <label for="message">Special Request</label>
+                                        <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Book Now</button>
+                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -1202,7 +1304,7 @@
 
 
     <!-- Process Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Process</h6>
@@ -1250,12 +1352,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Process Start -->
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5">
+    <!-- <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="section-title bg-white text-center text-primary px-3">Travel Guide</h6>
@@ -1328,12 +1430,12 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Team End -->
 
 
     <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center">
                 <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6>
@@ -1374,7 +1476,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Testimonial End -->
 
 
@@ -1403,7 +1505,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
+                    <!-- <h4 class="text-white mb-3">Gallery</h4>
                     <div class="row g-2 pt-2">
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
@@ -1423,17 +1525,17 @@
                         <div class="col-4">
                             <img class="img-fluid bg-light p-1" src="img/package-1.jpg" alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <h4 class="text-white mb-3">Lanka Discoveries</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <!-- <div class="position-relative mx-auto" style="max-width: 400px;">
                         <input class="form-control border-primary w-100 py-3 ps-4 pe-5" type="text"
                             placeholder="Your email">
                         <button type="button"
                             class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -1441,10 +1543,10 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Lanka Discoveries</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">d</a> -->
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
@@ -1462,7 +1564,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #0b6ad6;"><i class="bi bi-arrow-up" style="color: #fff;border-radius: 15px;"></i></a>
 
 
     <!-- JavaScript Libraries -->
@@ -1484,6 +1586,8 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
+
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
@@ -1501,6 +1605,115 @@
                 button.textContent = "Show Less";
             }
         });
+
+
+
+
+    // multiple select 
+    // Store selected options
+    let selectedValues = [];
+
+    // Function to handle option selection
+    function toggleOption(option) {
+      const value = option.dataset.value;
+      console.log(value)
+      const index = selectedValues.indexOf(value);
+      if (index > -1) {
+        // Remove from selected values if already selected
+        selectedValues.splice(index, 1);
+        option.style.backgroundColor = '#f0f0f0'; // Reset background color
+      } else {
+        // Add to selected values
+        selectedValues.push(value);
+        option.style.backgroundColor = '#f6f6f6'; // Set background color for selected
+        option.style.color = '#000'; 
+      }
+      updateSelectedOptions();
+      closeDropdown(); // Close dropdown after selecting an option
+    }
+
+    // Update the selected options display
+    function updateSelectedOptions() {
+  const selectedContainer = document.getElementById('selectedOptions');
+  selectedContainer.innerHTML = '';
+  selectedValues.forEach(value => {
+    const span = document.createElement('span');
+   
+   
+   
+    // Create another span for the value (e.g., Option 1, Option 2, etc.)
+    const valueText = document.createElement('span');
+    valueText.textContent = `${value} `;
+
+     // Create a span for the "Option" word and set its color to red
+     const optionText = document.createElement('span');
+    optionText.textContent = 'X';
+    optionText.style.color = 'red';  // Set the "Option" word to red
+   
+    // Append both spans
+   
+    span.appendChild(valueText);
+    span.appendChild(optionText);
+   
+    span.style.display = 'inline-block';
+    span.style.padding = '5px';
+    span.style.backgroundColor = '#007bff';
+    span.style.color = 'white';  // Keep the value part white
+    span.style.borderRadius = '4px';
+    span.style.margin = '2px';
+    span.style.cursor = 'pointer';
+    span.onclick = () => removeSelectedOption(value);
+    selectedContainer.appendChild(span);
+  });
+}
+    // Remove a selected option
+    function removeSelectedOption(value) {
+      selectedValues = selectedValues.filter(val => val !== value);
+      updateSelectedOptions();
+      const option = document.querySelector(`.multi-select-option[data-value='${value}']`);
+      option.style.backgroundColor = '#f0f0f0'; // Reset background color
+    }
+
+    // Function to filter options based on search input
+    function filterOptions() {
+      const searchQuery = document.getElementById('multiSearch').value.toLowerCase();
+      const options = document.querySelectorAll('.multi-select-option');
+      options.forEach(option => {
+        const text = option.textContent.toLowerCase();
+        if (text.includes(searchQuery)) {
+          option.style.display = 'block';
+        } else {
+          option.style.display = 'none';
+        }
+      });
+    }
+
+    // Function to toggle the dropdown visibility
+    function toggleDropdown() {
+      const dropdown = document.getElementById('optionsList');
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Function to close the dropdown
+    function closeDropdown() {
+      const dropdown = document.getElementById('optionsList');
+      dropdown.style.display = 'none';
+    }
+
+    // Attach click event to each option
+    document.querySelectorAll('.multi-select-option').forEach(option => {
+      option.onclick = () => toggleOption(option);
+    });
+
+    // Close the dropdown if the user clicks anywhere outside of the dropdown
+    window.addEventListener('click', function (e) {
+      const dropdown = document.getElementById('optionsList');
+      const multiSelect = document.querySelector('.multi-select');
+      if (!multiSelect.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+       
     </script>
     
     <script>
