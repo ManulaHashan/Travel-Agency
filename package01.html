@@ -39,6 +39,7 @@
 
 
     <style>
+
         .swiper-container {
             padding-bottom: 20px;
         }
@@ -181,6 +182,9 @@
             /* Slight zoom effect on hover */
             transition: 0.3s;
         }
+        #fixed_section{
+    position: fixed;
+}
     </style>
 
 </head>
@@ -229,24 +233,24 @@
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-            <a href="" class="navbar-brand d-flex align-items-center p-0">
-                <img src="img/logoWithName-removebg-preview.png" alt="Logo"
-                    style="border-radius: 150px; height: 175px; width: 250px; margin-right: 10px;">
-                <!-- <h3 class="mb-0" style="color: rgb(23, 23, 24);">Lanka Discoveries</h3> -->
+        <a href="" class="navbar-brand d-flex align-items-center p-0">
+            <img src="img/logoWithName-removebg-preview.png"  alt="Logo" 
+            style="border-radius: 150px; height: 175px; width: 250px; margin-right: 10px;">
+            <!-- <h3 class="mb-0" style="color: rgb(23, 23, 24);">Lanka Discoveries</h3> -->
 
-                <!-- <img src="img/Olankalogo.webp" alt="Logo" 
+            <!-- <img src="img/Olankalogo.webp" alt="Logo" 
                         style="height: 50; width: 50; margin-right: 10px; background-color: white">
                         <h3 class="mb-0" style="color: rgb(246, 249, 253);">Lanka <i>Discoveries</i></h3> -->
-
-            </a>
+            
+        </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav me-auto py-0 px-5">
-                    <a href="index.html" class="nav-item nav-link ">Home</a>
-                    <a href="index.html" class="nav-item nav-link active"> Holidays & Tours</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="packages.html" class="nav-item nav-link "> Holidays & Tours</a>
                     <a href="index.html" class="nav-item nav-link"> Success Stories</a>
                     <a href="index.html" class="nav-item nav-link"> About us </a>
                     <a href="index.html" class="nav-item nav-link"> FAQ</a>
@@ -266,35 +270,28 @@
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a> -->
                 </div>
-                <a href="" class="btn rounded-pill py-2 px-4"
-                    style=" background-color: rgb(11, 106, 214); color: white;">Get a Quote</a>
+                <a href="" class="btn rounded-pill py-2 px-4" style=" background-color: rgb(11, 106, 214); color: white;">Get a Quote</a>
                 <p class="py-2 px-4 mt-3" style="font-size: larger; color: white;"><b>24/7 Support</b></p>
             </div>
         </nav>
-
-        <!-- <div class="container-fluid bg-primary py-5 hero-headerpkg">
-            <div class="container py-1 mb-3">
-                <div class="row justify-content-start">
-                   
-                </div>
-            </div>
-        </div> -->
 
     </div>
     <!-- Navbar & Hero End -->
 
     <!-- Packages card start -->
 
-    <div class="container-xxl py-5 mt-5">
+    <div class="container-xxl py-5 mt-4" >
         <div class="container">
 
-            <div class="row g-5 mt-2">
-                <h1 class="mb-3" style="font-size: 45px;"><span style=" color: rgb(11, 106, 214);">Sri Lanka 
-                    </span>Tour Package 3 Days
-                </h1> 
-                <div class="row g-4 justify-content-center">
-                    <div class="col-md-8" data-wow-delay="0.1s" >
+            <div class="row g-5 mt-0">
+               
+                <div class="row g-4 justify-content-center" style="overflow-y:scroll; height:600px;">
+                    <div class="col-md-8"  data-wow-delay="0.1s" >
+                        <h1 class="mb-3" style="font-size: 45px;"><span style=" color: rgb(11, 106, 214);">Sri Lanka 
+                        </span>Tour Package 3 Days
+                    </h1> 
                         <div class="d-flex align-items-center">
+                            
                             <swiper-container class="mySwiper" style="width: 100%; height: 450px;" autoplay="true" a utoplay-delay="5000"
                                 loop="true" space-between="30" slides-per-view="1" effect="slide">
                     
@@ -415,143 +412,430 @@
                                 <p style="color: #6c757d;">Kandy, Colombo</p>
                             </div>
                         </div>
+                        <br />
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Day 1
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    At Kandy during August, you will witness a magnificent festival, Esala Perahera. While you enjoy its natural beauty, explore Kandy’s prestigious cultural sites and history. Visit the stunning Peradeniya Botanical Gardens, and sip a cup of Ceylon tea overlooking glorious mountain ranges!
+                                    <br />
+                                    <div class="pt-4">
+                                        <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;" />
+                                    </div>
+                                   <h3 class="mt-4">Day 01 Activities</h3>
+                                   <div class="mt-4">
+                                     <ul >
+                                        <li class="p-1">Arrive at Sri Lanka (Katunayake)</li>
+                                        <li class="p-1">Warm welcome by Olanka representative</li>
+                                        <li class="p-1">Proceed to beautiful Kandy city</li>
+                                        <li class="p-1">Watch Pinnawala elephant orphanage</li>
+                                        <li class="p-1">Visit aromatic local spice village</li>
+                                        <li class="p-1">Learn how various spices are made</li>
+                                        <li class="p-1">Tour village with friendly locals</li>
+                                     </ul>
+                                   </div>
+                                   <h3 class="mt-3">Kandy Highlights</h3>
+                                   <div>
+                                     <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                             <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                       
+                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Day 2
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    At Kandy during August, you will witness a magnificent festival, Esala Perahera. While you enjoy its natural beauty, explore Kandy’s prestigious cultural sites and history. Visit the stunning Peradeniya Botanical Gardens, and sip a cup of Ceylon tea overlooking glorious mountain ranges!
+                                    <br />
+                                    <div class="pt-4">
+                                        <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;" />
+                                    </div>
+                                   <h3 class="mt-4">Day 01 Activities</h3>
+                                   <div class="mt-4">
+                                     <ul >
+                                        <li class="p-1">Arrive at Sri Lanka (Katunayake)</li>
+                                        <li class="p-1">Warm welcome by Olanka representative</li>
+                                        <li class="p-1">Proceed to beautiful Kandy city</li>
+                                        <li class="p-1">Watch Pinnawala elephant orphanage</li>
+                                        <li class="p-1">Visit aromatic local spice village</li>
+                                        <li class="p-1">Learn how various spices are made</li>
+                                        <li class="p-1">Tour village with friendly locals</li>
+                                     </ul>
+                                   </div>
+                                   <h3 class="mt-3">Kandy Highlights</h3>
+                                   <div>
+                                     <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                             <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                       
+                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Day 3
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    At Kandy during August, you will witness a magnificent festival, Esala Perahera. While you enjoy its natural beauty, explore Kandy’s prestigious cultural sites and history. Visit the stunning Peradeniya Botanical Gardens, and sip a cup of Ceylon tea overlooking glorious mountain ranges!
+                                    <br />
+                                    <div class="pt-4">
+                                        <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;" />
+                                    </div>
+                                   <h3 class="mt-4">Day 01 Activities</h3>
+                                   <div class="mt-4">
+                                     <ul >
+                                        <li class="p-1">Arrive at Sri Lanka (Katunayake)</li>
+                                        <li class="p-1">Warm welcome by Olanka representative</li>
+                                        <li class="p-1">Proceed to beautiful Kandy city</li>
+                                        <li class="p-1">Watch Pinnawala elephant orphanage</li>
+                                        <li class="p-1">Visit aromatic local spice village</li>
+                                        <li class="p-1">Learn how various spices are made</li>
+                                        <li class="p-1">Tour village with friendly locals</li>
+                                     </ul>
+                                   </div>
+                                   <h3 class="mt-3">Kandy Highlights</h3>
+                                   <div>
+                                     <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                             <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src="https://www.olankatravels.com.au/_next/image/?url=https%3A%2F%2Fd2xmwf00c85p5s.cloudfront.net%2FKandy_bc75409c8f.png&w=1920&q=75" style="border-radius: 15px;width:100%;" />
+                                                <p class="p-2">Lankathilaka Vihara</p>
+                                            </div>
+                                        </div>
+                                     </div>
+                                       
+                                   </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p-4 bg-gray">
+                            <h3>Your Tour Map</h3>
+                            <div class="mt-3">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Sri_Lanka_blank_locator_map.svg/1582px-Sri_Lanka_blank_locator_map.svg.png" class="img-fluid" />
+                                    </div>
+                                    <div class="col-md-3">
 
+                                    </div>
+                                  
+                                </div>
+                                
+                            </div>
+                          </div>
+                          <div class="container mt-5 p-5 border-rounded" style="background-color: #f6f6f6;">
+                         
                         
+                            <!-- Tabs Navigation -->
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">
+                                        Inclutions
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                                        Exclutions
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+                                        Conditions
+                                    </button>
+                                </li>
+                            </ul>
+                        
+                            <!-- Tabs Content -->
+                            <div class="tab-content mt-3" id="myTabContent">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg> Dedicated Destination Expert</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg> Dedicated Destination Expert</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg> Dedicated Destination Expert</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg> Dedicated Destination Expert</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
+                                        <path
+                                            d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                                    </svg> Dedicated Destination Expert</p>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg> Account Manager</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg> Account Manager</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg> Account Manager</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg> Account Manager</p>
+                                    <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                                    </svg> Account Manager</p>
+                                </div>
+                                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                    <string class="p-4">*Booking information*</string>
+
+                                    <p class="pl-4">Once booking details are submitted by you, we will go ahead with the booking process. At this stage, we require a 20% payment from you. A booking confirmation will reach you after 48 hours of making the payment. A balance of 80% of the payment is required, 30 days prior to the tour start date. Then you may go ahead with applying for Visa.</p>
+                                    
+                                   <strong class="p-4">*Cancellation Policy*</strong> 
+                                    
+                                   <p class="pl-4">All travel offers listed on our website are discounted. As such, all orders are non-refundable, and cannot be used in conjunction with any other promotion. Thus, no refund for Cancellations made with less than 30 days from the start of a tour and for No-show.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="col-md-4" style="background-color: #f6f6f6;">
-                   Right Side
+                    <div class="col-md-4" style="background-color: #fff;  overflow-y: hidden; position:relative;">
+                       <div class="sticky top-[120px] bg-light rounded-md text-[#6A6A6A] overflow-y-auto h-100" 
+                       >
+                        <div class="grid grid-cols-2 p-[32px] gap-4">
+                            <div class="col-span-1">
+                                <p class="mb-2 font-light">Destination</p>
+                                <div class="flex items-center">
+                                    <p class="mt-2 font-light text-[14px]">*Our reply time is almost instant</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    </div>
             </div>
         </div>
+        </div>
     </div>
-
     <!-- Packages card end -->
 
-    <hr>
 
     <!-- Awesome Packages start -->
 
-    <div style="background-color: #f6f6f6;">
-        <div class="container py-5 wow fadeInUp">
-            <div class="text-center mb-5">
-                <h6 style="color: #007bff; font-weight: bold;">Packages</h6>
-                <h1>Awesome Packages</h1>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 bg">
-                    <div class="p-4 border"
-                        style="border-radius: 15px; transition: transform 0.3s ease; height: 570px; background-color: #fff; ">
-
-                        <span class="badge p-2 mb-2"
-                            style="background-color: #fff; color: #000; font-weight: bold;">Best Selling</span>
-                        <h4>Flexible Individual Travel</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $790 PP</p>
-                        <p style="color:#555;"> Perfect for families who want to travel with privacy, need full
-                            flexibility, and have specific requirements.</p>
-                        <ul style="color:#555;">
-                            <li>Private Trip</li>
-                            <li>Fully customised</li>
-                            <li>Private vehicle and driver</li>
-                            <li>Flexibility during travelling</li>
-                        </ul>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> Dedicated Destination Expert</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> 24/7 global care</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> Account Manager</p>
-                        <button class="btn w-100 mt-5"
-                            style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get
-                            a Quote</button>
+    <div class="container-xxl py-5 mt-0">
+        <div class="container">
+           
+            <div class="row g-5 mt-0 pt-0">
+                <h1 class="mb-2" style="font-size: 45px;"> 
+                    <span style=" color: rgb(11, 106, 214);">Related </span>Tours
+                </h1>
+                <div class="row g-4 justify-content-center">
+                
+                    <div class="col-md-3" data-wow-delay="0.5s">
+                        <a href="destination.html" class="package-link">
+                            <div class="package-item" style="border-radius: 25px; overflow: hidden;">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="img/package-3.jpg" alt="">
+                                </div>
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt text-warning me-2"></i>Malaysia
+                                    </small>
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt text-warning me-2"></i>3 days
+                                    </small>
+                                    <small class="flex-fill text-center py-2">
+                                        <i class="fa fa-user text-warning me-2"></i>2 Person
+                                    </small>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$189.00</h3>
+                                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3"data-wow-delay="0.5s">
+                        <a href="destination.html" class="package-link">
+                            <div class="package-item" style="border-radius: 25px; overflow: hidden;">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="img/package-3.jpg" alt="">
+                                </div>
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt text-warning me-2"></i>Malaysia
+                                    </small>
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt text-warning me-2"></i>3 days
+                                    </small>
+                                    <small class="flex-fill text-center py-2">
+                                        <i class="fa fa-user text-warning me-2"></i>2 Person
+                                    </small>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$189.00</h3>
+                                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3" data-wow-delay="0.5s">
+                        <a href="destination.html" class="package-link">
+                            <div class="package-item" style="border-radius: 25px; overflow: hidden;">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="img/package-3.jpg" alt="">
+                                </div>
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt text-warning me-2"></i>Malaysia
+                                    </small>
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt text-warning me-2"></i>3 days
+                                    </small>
+                                    <small class="flex-fill text-center py-2">
+                                        <i class="fa fa-user text-warning me-2"></i>2 Person
+                                    </small>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$189.00</h3>
+                                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3" data-wow-delay="0.5s">
+                        <a href="destination.html" class="package-link">
+                            <div class="package-item" style="border-radius: 25px; overflow: hidden;">
+                                <div class="overflow-hidden">
+                                    <img class="img-fluid" src="img/package-3.jpg" alt="">
+                                </div>
+                                <div class="d-flex border-bottom">
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-map-marker-alt text-warning me-2"></i>Malaysia
+                                    </small>
+                                    <small class="flex-fill text-center border-end py-2">
+                                        <i class="fa fa-calendar-alt text-warning me-2"></i>3 days
+                                    </small>
+                                    <small class="flex-fill text-center py-2">
+                                        <i class="fa fa-user text-warning me-2"></i>2 Person
+                                    </small>
+                                </div>
+                                <div class="text-center p-4">
+                                    <h3 class="mb-0">$189.00</h3>
+                                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="p-4 border"
-                        style="border-radius: 15px; transition: transform 0.3s ease; height: 570px; background-color:#fff;">
-
-                        <span class="badge p-2 mb-2 "
-                            style="background-color: #fff; color: #000; font-weight: bold;">Group Adventure | 20%
-                            Off</span>
-                        <h4>Small Group Tours</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $950 PP</p>
-                        <p style="color:#555;">Ideal for those who love travelling in small groups, and have less
-                            flexibility during their travels and dates.</p>
-                        <ul style="color:#555;">
-                            <li>Travelling with small groups of up to 16 people</li>
-                            <li>A fixed tour plan and fixed dates</li>
-                            <li>Shared transport</li>
-                            <li>No flexibility during travelling</li>
-                        </ul>
-                        <p style="color:#555;"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> Dedicated Destination Expert</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> 24/7 global care</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                            </svg> Account Manager</p>
-                        <button class="btn w-100 mt-4"
-                            style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get
-                            a Quote</button>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="p-4 border"
-                        style="border-radius: 15px; transition: transform 0.3s ease; height: 570px; background-color:#fff;">
-
-                        <span class="badge p-2 mb-2"
-                            style="background-color: #fff; color: #000; font-weight: bold;">Ultimate Relaxing | 30%
-                            Off</span>
-                        <h4>Holiday Getaways</h4>
-                        <p style="font-size: 1.5rem; font-weight: bold;">AUD $590 PP</p>
-                        <p style="color:#555;">Ideal for those who have flexible travel schedules, seeking discounted
-                            getaways, offering reduced prices and shorter travel distances.</p>
-                        <ul style="color:#555;">
-                            <li>Private Trip</li>
-                            <li>Fixed travel period</li>
-                            <li>Private vehicle and driver</li>
-                            <li>Flexibility during travelling</li>
-                            <li>Discounted prices and offers</li>
-                        </ul>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                            </svg> Dedicated Destination Expert</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16" color="green">
-                                <path
-                                    d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                            </svg> 24/7 global care</p>
-                        <p style="color:#555;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16" color="red">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                            </svg> Account Manager</p>
-                        <button class="btn w-100"
-                            style="background-color: #080808; color: #fff; border-radius: 50px; padding: 10px 20px; font-weight: bold;">Get
-                            a Quote</button>
-                    </div>
-                </div>
-            </div>
+            </div> 
         </div>
     </div>
 
@@ -825,6 +1109,8 @@
 
 
     <!-- Footer Start -->
+   
+
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -904,6 +1190,7 @@
             </div>
         </div>
     </div>
+   
     <!-- Footer End -->
 
 
@@ -1058,6 +1345,10 @@
                 closeDropdown();
             }
         });
+
+        // asa
+
+
 
     </script>
 
