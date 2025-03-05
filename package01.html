@@ -186,6 +186,32 @@
         #fixed_section {
             position: fixed;
         }
+
+        /* dropdown */
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+  }
+  .dropdown-content label {
+    display: block;
+    margin: 5px 0;
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
     </style>
 
 </head>
@@ -1195,109 +1221,112 @@
     <br />
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
-            <div class="booking p-5" style="border-radius: 15px;">
+            <div class="booking p-5 shadow-lg bg-white rounded-4">
                 <div class="row g-5 align-items-center">
-                    <div class="col-md-6 text-white">
-                        <h6 class="text-white text-uppercase">Get a Quote / Make your Own Itinerary</h6>
+                    <div class="col-md-6 text-dark">
+                        <h6 class=" text-uppercase">Get a Quote</h6>
                         <h1 class="text-white mb-4">Online Reservation</h1>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit.</p>
-                        <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                            diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
-                            dolore erat amet</p>
-                        <!-- <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a> -->
+                        <p class="mb-4 text-white">Plan your trip with ease. Book a tour, select your hotel, and enjoy seamless travel arrangements.</p>
                     </div>
                     <div class="col-md-6">
-                        <h1 class="text-white mb-4">Book A Tour</h1>
+                        <h1 class="mb-4" style="color:#f6f6f6;">Book A Tour</h1>
                         <form>
                             <div class="row g-3">
                                 <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name"
-                                            style="border-radius: 15px;" placeholder="Your Name">
-                                        <label for="name" style="color: white;">Your Name</label>
+                                    <div class="form-floating rounded">
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email"
-                                            style="border-radius: 15px;" placeholder="Your Email">
-                                        <label for="email" style="color: white;">Your Email</label>
+                                        <input type="email" class="form-control" style="border-radius: 14px;" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating date" id="date3" data-target-input="nearest">
-                                        <select class="form-control bg-transparent" id="hotel_type"
-                                            style="border-radius: 15px;">
-                                            <option>select hotel type</option>
+                                    <div class="form-floating" >
+                                        <select class="form-select" style="border-radius: 14px;" id="hotel_type">
+                                            <option value="">Select Hotel Type</option>
                                             <option>3 Star</option>
                                             <option>4 Star</option>
                                             <option>5 Star</option>
                                         </select>
-                                        <label for="datetime" style="color: white;">Hotel Type</label>
+                                        <label for="hotel_type">Hotel Type</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name"
-                                            style="border-radius: 15px;" placeholder="USA">
-                                        <label for="datetime" style="color: white;">I'm from</label>
+                                    <div class="form-floating" >
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="from" placeholder="I'm from">
+                                        <label for="from">I'm from</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="number" class="form-control bg-transparent" id="name"
-                                            style="border-radius: 15px;" placeholder="3">
-                                        <label for="select1" style="color: white;">No of Nights</label>
+                                    <div class="form-floating" >
+                                        <input type="number" class="form-control" style="border-radius: 14px;" id="nights" placeholder="No of Nights">
+                                        <label for="nights">No of Nights</label>
                                     </div>
                                 </div>
-                                <div class="col-6">
-
-                                    <div class="multi-select"
-                                        style="width: 100%; position: relative; border: 1px solid #ccc; border-radius: 15px; padding: 10px;">
-                                        <div class="multi-select-header" style="position: relative; ">
-                                            <div onclick="toggleDropdown()"
-                                                style="display: flex; align-items: center; width: 100%; cursor: pointer;">
-                                                <input type="text" id="multiSearch" placeholder="Select Destinations"
-                                                    oninput="filterOptions()"
-                                                    style="width: 100%;flex-grow: 1; padding: 5px; border: none; background-color:transparent; outline: none; border-radius: 4px;">
-
-                                                <button type="button"
-                                                    style="background: none; border: none; font-size: 16px; cursor: pointer; margin-left: 10px;">&#9660;</button>
-                                            </div>
+                                <div class="col-md-6">
+                                    <div class="dropdown" style="background-color: #fff; width: 100%; height: 100%;padding-top: 0px; border-radius: 14px;">
+                                        <small id="location_label"></small> <br />
+                                        <span id="selectedFruits"></span>
+                                        <div class="dropdown-content">
+                                          <label><input type="checkbox" name="Kandy" value="Kandy"> Kandy</label>
+                                          <label><input type="checkbox" name="Matale" value="Matale"> Matale</label>
+                                          <label><input type="checkbox" name="Ella" value="Ella"> Ella</label>
+                                          <label><input type="checkbox" name="Galle" value="Galle"> Galle</label>
                                         </div>
-                                        <div class="multi-select-options" id="optionsList"
-                                            style="display: none; max-height: 150px; overflow-y: auto; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; background-color: #fff; position: absolute; width: 100%; z-index: 999;">
-                                            <div class="multi-select-option" data-value="Ella"
-                                                style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
-                                                Ella &nbsp;</div>
-                                            <div class="multi-select-option" data-value="Kandy"
-                                                style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
-                                                Kandy&nbsp; </div>
-                                            <div class="multi-select-option" data-value="Arugambay"
-                                                style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
-                                                Arugambay&nbsp;</div>
-                                            <div class="multi-select-option" data-value="Dambulla"
-                                                style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
-                                                Dambulla&nbsp;</div>
-                                            <div class="multi-select-option" data-value="Galle"
-                                                style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">
-                                                Galle&nbsp;</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="selected-options" id="selectedOptions" style="margin-top: 10px;"></div>
-
+                                      </div>
+                                      
+                                      <script>
+                                        document.querySelector('.dropdown').addEventListener('click', function(event) {
+                                          this.classList.toggle('open');
+                                          event.stopPropagation();
+                                        });
+                                        document.getElementById('selectedFruits').textContent = 'Select Location';
+                                        // document.getElementById("location_label").addEventListener("click", function() {
+                                        //     this.style.backgroundColor = "green";
+                                        //     document.getElementById("location_label").classList.toggle('active')
+                                        // });
+                                      
+                                        document.addEventListener('click', function(event) {
+                                          document.querySelector('.dropdown').classList.remove('open');
+                                        });
+                                      
+                                        function updateSelectedFruits() {
+                                          var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+                                          var selectedFruits = [];
+                                          checkboxes.forEach(function(checkbox) {
+                                            if (checkbox.checked) {
+                                              selectedFruits.push(checkbox.value);
+                                            }
+                                          });
+                                          var displayText = (selectedFruits.length > 0) ?  selectedFruits.join(', ') : 'Select Locations';
+                                          document.getElementById('selectedFruits').textContent = displayText;
+                                          if (selectedFruits.length === 0) {
+                                            document.getElementById('location_label').textContent = '';
+                                          } else {
+                                            document.getElementById('location_label').textContent = 'Select Location';
+                                          }
+                                          
+                                        }
+                                      
+                                        document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(function(checkbox) {
+                                          checkbox.addEventListener('change', updateSelectedFruits);
+                                          
+                                        });
+                                      </script>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control bg-transparent" placeholder="Special Request"
-                                            id="message" style="height: 100px"></textarea>
-                                        <label for="message" style="color: white;">Message</label>
+                                    <div class="form-floating" >
+                                        <textarea class="form-control"  style="border-radius: 14px;height:150px" id="message" placeholder="Special Request" style="height: 100px;"></textarea>
+                                        <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-outline-light w-100 py-3" type="submit">Submit</button>
+                                    <button class="btn btn-primary w-100 py-3" 
+                                    style="background-color: #0B6AD6;border-radius: 50rem;" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>

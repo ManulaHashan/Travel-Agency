@@ -1,96 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Multi-Select Dropdown</title>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkbox Multiselect Dropdown</title>
+<style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
 <body>
 
-  <div class="multi-select" style="width: 300px; height: auto; overflow: auto; border: 1px solid #ccc; border-radius: 4px; padding: 10px;">
-    <div class="multi-select-header">
-      <input type="text" id="multiSearch" placeholder="Search..." oninput="filterOptions()" style="width: 100%; padding: 5px;">
-    </div>
-    <div class="multi-select-options" id="optionsList" style="display: none;">
-      <div class="multi-select-option" data-value="1" style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">Option 1</div>
-      <div class="multi-select-option" data-value="2" style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">Option 2</div>
-      <div class="multi-select-option" data-value="3" style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">Option 3</div>
-      <div class="multi-select-option" data-value="4" style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">Option 4</div>
-      <div class="multi-select-option" data-value="5" style="padding: 8px; cursor: pointer; display: block; background-color: #f0f0f0; margin: 4px 0; border-radius: 4px;">Option 5</div>
-    </div>
+<div class="dropdown">
+  <span>Select Fruits</span>
+  <div class="dropdown-content">
+    <label><input type="checkbox" name="fruits" value="apple"> Apple</label>
+    <label><input type="checkbox" name="fruits" value="orange"> Orange</label>
+    <label><input type="checkbox" name="fruits" value="banana"> Banana</label>
+    <label><input type="checkbox" name="fruits" value="grape"> Grape</label>
   </div>
+</div>
 
-  <div class="selected-options" id="selectedOptions" style="margin-top: 10px;"></div>
+<script>
+// JavaScript to handle the dropdown behavior and collect selected values
+document.addEventListener('click', function(event) {
+  var dropdown = document.querySelector('.dropdown-content');
+  if (!dropdown.contains(event.target)) {
+    // dropdown.style.display = 'none';
+  }
+});
 
-  <script>
-    // Store selected options
-    let selectedValues = [];
-
-    // Function to handle option selection
-    function toggleOption(option) {
-      const value = option.dataset.value;
-      const index = selectedValues.indexOf(value);
-      if (index > -1) {
-        // Remove from selected values if already selected
-        selectedValues.splice(index, 1);
-        option.style.backgroundColor = '#f0f0f0'; // Reset background color
-      } else {
-        // Add to selected values
-        selectedValues.push(value);
-        option.style.backgroundColor = '#007bff'; // Set background color for selected
-      }
-      updateSelectedOptions();
+function getSelectedFruits() {
+  var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+  var selectedFruits = [];
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      selectedFruits.push(checkbox.value);
     }
+  });
+  return selectedFruits;
+}
 
-    // Update the selected options display
-    function updateSelectedOptions() {
-      const selectedContainer = document.getElementById('selectedOptions');
-      selectedContainer.innerHTML = '';
-      selectedValues.forEach(value => {
-        const span = document.createElement('span');
-        span.textContent = `Option ${value}`;
-        span.style.display = 'inline-block';
-        span.style.padding = '5px';
-        span.style.backgroundColor = '#007bff';
-        span.style.color = 'white';
-        span.style.borderRadius = '4px';
-        span.style.margin = '2px';
-        span.style.cursor = 'pointer';
-        span.onclick = () => removeSelectedOption(value);
-        selectedContainer.appendChild(span);
-      });
-    }
-
-    // Remove a selected option
-    function removeSelectedOption(value) {
-      selectedValues = selectedValues.filter(val => val !== value);
-      updateSelectedOptions();
-      const option = document.querySelector(`.multi-select-option[data-value='${value}']`);
-      option.style.backgroundColor = '#f0f0f0'; // Reset background color
-    }
-
-    // Function to filter options based on search input
-    function filterOptions() {
-      const searchQuery = document.getElementById('multiSearch').value.toLowerCase();
-      const options = document.querySelectorAll('.multi-select-option');
-      options.forEach(option => {
-        const text = option.textContent.toLowerCase();
-        if (text.includes(searchQuery)) {
-          option.style.display = 'block';
-        } else {
-          option.style.display = 'none';
-        }
-      });
-    }
-
-    // Attach click event to each option
-    document.querySelectorAll('.multi-select-option').forEach(option => {
-      option.onclick = () => toggleOption(option);
-    });
-  </script>
+// Example usage
+document.querySelector('.dropdown button').addEventListener('click', function() {
+  console.log(getSelectedFruits());
+});
+</script>
 
 </body>
-
 </html>
