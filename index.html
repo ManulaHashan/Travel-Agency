@@ -34,11 +34,14 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
     
 
 <style>
+
+    
     .swiper-container {
         padding-bottom: 20px;
     }
@@ -162,6 +165,33 @@
  #multiSearch::placeholder {
         color: rgb(206, 204, 204);
     }
+
+
+/* dropdown */
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+  }
+  .dropdown-content label {
+    display: block;
+    margin: 5px 0;
+  }
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
 </style>
    
 </head>
@@ -997,7 +1027,7 @@
 
     <!-- Booking Start -->
      <br />
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="booking p-5 shadow" style="border-radius: 15px;">
                 <div class="row g-5 align-items-center">
@@ -1009,29 +1039,29 @@
                         <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
                             diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna
                             dolore erat amet</p>
-                        <!-- <a class="btn btn-outline-light py-3 px-5 mt-2" href="">Read More</a> -->
+                      
                     </div>
                     <div class="col-md-6">
                         <h1 class="text-white mb-4">Book A Tour</h1>
-                        <form>
+                        <form autocomplete="off">
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control bg-transparent" id="name" style="border-radius: 15px;"
+                                        <input type="text" class="form-control bg-white" id="name" style="border-radius: 15px;"
                                             placeholder="Your Name">
-                                        <label for="name" style="color: white;">Your Name</label>
+                                        <label for="name" style="color: #555;">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control bg-transparent" id="email" style="border-radius: 15px;"
+                                        <input type="email" autocomplete="off" class="form-control bg-transparent" id="email" style="border-radius: 15px;"
                                             placeholder="Your Email">
                                         <label for="email"style="color: white;">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating " id="date3" data-target-input="nearest" >
-                                        <select class="form-control bg-transparent" id="hotel_type" style="border-radius: 15px;">
+                                        <select class="form-control bg-white" id="hotel_type" style="border-radius: 15px;">
                                             <option>select hotel type</option>
                                             <option>3 Star</option>
                                             <option>4 Star</option>
@@ -1106,7 +1136,125 @@
                 </div>
             </div>
         </div>
+    </div> -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="booking p-5 shadow-lg bg-white rounded-4">
+                <div class="row g-5 align-items-center">
+                    <div class="col-md-6 text-dark">
+                        <h6 class=" text-uppercase">Get a Quote</h6>
+                        <h1 class="text-white mb-4">Online Reservation</h1>
+                        <p class="mb-4 text-white">Plan your trip with ease. Book a tour, select your hotel, and enjoy seamless travel arrangements.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h1 class="mb-4" style="color:#f6f6f6;">Book A Tour</h1>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating rounded">
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" style="border-radius: 14px;" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating" >
+                                        <select class="form-select" style="border-radius: 14px;" id="hotel_type">
+                                            <option value="">Select Hotel Type</option>
+                                            <option>3 Star</option>
+                                            <option>4 Star</option>
+                                            <option>5 Star</option>
+                                        </select>
+                                        <label for="hotel_type">Hotel Type</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating" >
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="from" placeholder="I'm from">
+                                        <label for="from">I'm from</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating" >
+                                        <input type="number" class="form-control" style="border-radius: 14px;" id="nights" placeholder="No of Nights">
+                                        <label for="nights">No of Nights</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="dropdown" style="background-color: #fff; width: 100%; height: 100%;padding-top: 0px; border-radius: 14px;">
+                                        <small id="location_label"></small> <br />
+                                        <span id="selectedFruits"></span>
+                                        <div class="dropdown-content">
+                                          <label><input type="checkbox" name="Kandy" value="Kandy"> Kandy</label>
+                                          <label><input type="checkbox" name="Matale" value="Matale"> Matale</label>
+                                          <label><input type="checkbox" name="Ella" value="Ella"> Ella</label>
+                                          <label><input type="checkbox" name="Galle" value="Galle"> Galle</label>
+                                        </div>
+                                      </div>
+                                      
+                                      <script>
+                                        document.querySelector('.dropdown').addEventListener('click', function(event) {
+                                          this.classList.toggle('open');
+                                          event.stopPropagation();
+                                        });
+                                        document.getElementById('selectedFruits').textContent = 'Select Location';
+                                        // document.getElementById("location_label").addEventListener("click", function() {
+                                        //     this.style.backgroundColor = "green";
+                                        //     document.getElementById("location_label").classList.toggle('active')
+                                        // });
+                                      
+                                        document.addEventListener('click', function(event) {
+                                          document.querySelector('.dropdown').classList.remove('open');
+                                        });
+                                      
+                                        function updateSelectedFruits() {
+                                          var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+                                          var selectedFruits = [];
+                                          checkboxes.forEach(function(checkbox) {
+                                            if (checkbox.checked) {
+                                              selectedFruits.push(checkbox.value);
+                                            }
+                                          });
+                                          var displayText = (selectedFruits.length > 0) ?  selectedFruits.join(', ') : 'Select Locations';
+                                          document.getElementById('selectedFruits').textContent = displayText;
+                                          if (selectedFruits.length === 0) {
+                                            document.getElementById('location_label').textContent = '';
+                                          } else {
+                                            document.getElementById('location_label').textContent = 'Select Location';
+                                          }
+                                          
+                                        }
+                                      
+                                        document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(function(checkbox) {
+                                          checkbox.addEventListener('change', updateSelectedFruits);
+                                          
+                                        });
+                                      </script>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating" >
+                                        <textarea class="form-control"  style="border-radius: 14px;height:150px" id="message" placeholder="Special Request" style="height: 100px;"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" 
+                                    style="background-color: #0B6AD6;border-radius: 50rem;" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    
+
     <!-- Booking Start -->
 
 
