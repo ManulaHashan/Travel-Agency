@@ -18,7 +18,7 @@
         href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
         rel="stylesheet">
 
-       
+
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -37,48 +37,47 @@
     <link href="css/home.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs/dist/purecounter_vanilla.js"></script>
-    
 
-<style>
 
-    
-    .swiper-container {
-        padding-bottom: 20px;
-    }
+    <style>
+        .swiper-container {
+            padding-bottom: 20px;
+        }
 
-    .card {
-        height: 300px;
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-        color: white;
-    }
+        .card {
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            color: white;
+        }
 
-    .card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-        /* Dark overlay for better text visibility */
-    }
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            /* Dark overlay for better text visibility */
+        }
 
-    .card .card-body {
-        position: absolute;
-        bottom: 15px;
-        left: 15px;
-        z-index: 2;
-    }
+        .card .card-body {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            z-index: 2;
+        }
 
-    .card-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-    }
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
 
-    .card-text {
-        font-size: 0.9rem;
-    }
-    /* -------stepper----------------- */
-    .step-container {
+        .card-text {
+            font-size: 0.9rem;
+        }
+
+        /* -------stepper----------------- */
+        .step-container {
             position: relative;
             display: flex;
             align-items: center;
@@ -87,11 +86,12 @@
         }
 
         .step-container::after {
-            content: "\f061"; /* Unicode for Font Awesome right arrow */
+            content: "\f061";
+            /* Unicode for Font Awesome right arrow */
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             font-size: 20px;
-            color: #3d8de9;
+            color: var(--primary);
             position: absolute;
             right: -30px;
             top: 50%;
@@ -103,97 +103,103 @@
             content: "";
         }
 
-    /* multiple select  */
-    .multi-select-container {
-  display: inline-block;
-  position: relative;
-}
+        /* multiple select  */
+        .multi-select-container {
+            display: inline-block;
+            position: relative;
+        }
 
-.multi-select-menu {
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  float: left;
-  min-width: 100%;
-  background: #fff;
-  margin: 1em 0;
-  padding: 0.4em 0;
-  border: 1px solid #aaa;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-}
+        .multi-select-menu {
+            position: absolute;
+            left: 0;
+            top: 0.8em;
+            float: left;
+            min-width: 100%;
+            background: #fff;
+            margin: 1em 0;
+            padding: 0.4em 0;
+            border: 1px solid #aaa;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
 
-.multi-select-menu input {
-  margin-right: 0.3em;
-  vertical-align: 0.1em;
-}
+        .multi-select-menu input {
+            margin-right: 0.3em;
+            vertical-align: 0.1em;
+        }
 
-.multi-select-button {
-  display: inline-block;
-  font-size: 0.875em;
-  padding: 0.2em 0.6em;
-  max-width: 20em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  vertical-align: -0.5em;
-  background-color: #fff;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  cursor: default;
-}
+        .multi-select-button {
+            display: inline-block;
+            font-size: 0.875em;
+            padding: 0.2em 0.6em;
+            max-width: 20em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: -0.5em;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            cursor: default;
+        }
 
-.multi-select-button:after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0.4em 0.4em 0 0.4em;
-  border-color: #999 transparent transparent transparent;
-  margin-left: 0.4em;
-  vertical-align: 0.1em;
-}
+        .multi-select-button:after {
+            content: "";
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0.4em 0.4em 0 0.4em;
+            border-color: #999 transparent transparent transparent;
+            margin-left: 0.4em;
+            vertical-align: 0.1em;
+        }
 
-.multi-select-container--open .multi-select-menu { display: block; }
+        .multi-select-container--open .multi-select-menu {
+            display: block;
+        }
 
-.multi-select-container--open .multi-select-button:after {
-  border-width: 0 0.4em 0.4em 0.4em;
-  border-color: transparent transparent #999 transparent;
-}
- #multiSearch::placeholder {
-        color: rgb(206, 204, 204);
-    }
+        .multi-select-container--open .multi-select-button:after {
+            border-width: 0 0.4em 0.4em 0.4em;
+            border-color: transparent transparent #999 transparent;
+        }
+
+        #multiSearch::placeholder {
+            color: rgb(206, 204, 204);
+        }
 
 
-/* dropdown */
-    .dropdown {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    padding: 10px;
-  }
-  .dropdown-content label {
-    display: block;
-    margin: 5px 0;
-  }
-  .dropdown.open .dropdown-content {
-    display: block;
-  }
-</style>
-   
+        /* dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            padding: 10px;
+        }
+
+        .dropdown-content label {
+            display: block;
+            margin: 5px 0;
+        }
+
+        .dropdown.open .dropdown-content {
+            display: block;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -239,11 +245,11 @@
 
     <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" >
-        <a href="/index.html" class="navbar-brand d-flex align-items-center p-0" >
-            <img src="img/logo1.png"  alt="Logo" class="img-fluid"> 
-            <!-- <srtong class="nav-item">LANKA <br /> Discoveries</srtong> -->
-        </a>
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="/index.html" class="navbar-brand d-flex align-items-center p-0">
+                <img src="img/logo1.png" alt="Logo" class="img-fluid">
+                <!-- <srtong class="nav-item">LANKA <br /> Discoveries</srtong> -->
+            </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -256,655 +262,691 @@
                     <a href="/" class="nav-item nav-link"> About us </a>
                     <a href="/" class="nav-item nav-link"> FAQ</a>
                 </div>
-                <a href="#get_a_quote_section" class="btn rounded-pill py-2 px-4" style=" background-color: var(--primary); color: white;">Get a Quote</a>
+                <a href="#get_a_quote_section" class="btn rounded-pill py-2 px-4"
+                    style=" background-color: var(--primary); color: white;">Get a Quote</a>
                 <p class="py-2 px-4 mt-3" style="font-size: larger; color: #000;"><b>24/7 Support</b></p>
             </div>
         </nav>
 
         <div class="container-fluid bg-primary py-5 hero-header">
-    <div class="container py-1 mb-3">
-        <div class="row justify-content-start">
-            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-start">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">
-                    Start Your Holiday Planning <br>Here!
-                </h1>
+            <div class="container py-1 mb-3">
+                <div class="row justify-content-start">
+                    <div class="col-lg-10 pt-lg-5 mt-lg-5 text-start">
+                        <h1 class="display-3 text-white mb-3 animated slideInDown">
+                            Start Your Holiday Planning <br>Here!
+                        </h1>
 
-                <p class="text-white mb-4 animated slideInDown" style="font-size: 45px;">
-                     <span style="font-size: 23px;">Connect with a Local </span ><b style="font-size: 30px;">Destination Expert</b> <span style="font-size: 23px;">Online</span> 
-                </p>
-                <p class="text-white mb-4 animated slideInDown" style="font-size: 20px;">
-                    Instantly connect with one of our destination experts from your preferred destinations! Our services are available <b>24/7</b>
-                </p>
-                <div class="position-relative animated slideInDown">
-                    <button type="button" class="btn rounded-pill py-2 px-4 ms-0"
-                        style="margin-top: 7px; width: 250px; height: 50px; background-color: var(--primary); color: white;">
-                        Watch Intro
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" fill="currentColor" class="bi bi-play"
-                            viewBox="0 0 16 16">
-                            <path
-                                d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
-                        </svg>
-                    </button>
+                        <p class="text-white mb-4 animated slideInDown" style="font-size: 45px;">
+                            <span style="font-size: 23px;">Connect with a Local </span><b
+                                style="font-size: 30px;">Destination Expert</b> <span
+                                style="font-size: 23px;">Online</span>
+                        </p>
+                        <p class="text-white mb-4 animated slideInDown" style="font-size: 20px;">
+                            Instantly connect with one of our destination experts from your preferred destinations! Our
+                            services are available <b>24/7</b>
+                        </p>
+                        <div class="position-relative animated slideInDown">
+                            <button type="button" class="btn rounded-pill py-2 px-4 ms-0"
+                                style="margin-top: 7px; width: 250px; height: 50px; background-color: var(--primary); color: white;">
+                                Watch Intro
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="40" fill="currentColor"
+                                    class="bi bi-play" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
     </div>
     <!-- Navbar & Hero End -->
 
 
 
-     <!-- Stepper Area  start-->
-<div class="container my-5 shadow" style="background-color: var(--light); padding: 40px; border-radius: 10px;">
-    <div class="text-center">
-        <h2><strong>How</strong> It Works</h2>
-        <div class="row mt-4 position-relative justify-content-center">
-            <div class="col-md-3 text-center step-container">
-                <span style="font-weight: bold;">01</span>
-                <div
-                    style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-envelope fa-2x"></i>
-                </div>
-                <p style="font-weight: bold; margin-top: 10px;">Submit Your Details</p>
-            </div>
-
-            <div class="col-md-3 text-center step-container">
-                <span style="font-weight: bold;">02</span>
-                <div
-                    style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-users fa-2x"></i>
-                </div>
-                <p style="font-weight: bold; margin-top: 10px;">Connect with a Local Expert Online</p>
-            </div>
-
-            <div class="col-md-3 text-center step-container">
-                <span style="font-weight: bold;">03</span>
-                <div
-                    style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-file-alt fa-2x"></i>
-                </div>
-                <p style="font-weight: bold; margin-top: 10px;">Receive 3 Personalized Travel Quotes</p>
-            </div>
-
-            <div class="col-md-3 text-center step-container">
-                <span style="font-weight: bold;">04</span>
-                <div
-                    style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
-                    <i class="fas fa-suitcase fa-2x"></i>
-                </div>
-                <p style="font-weight: bold; margin-top: 10px;">Secure Your Booking</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Stepper Area  end-->
-
-<hr>
-
-<!-- Places card area start -->
-
-<div class="container-xxl py-5">
-    <div class="container">
-
-        <div class="row g-5">
-            <div class="col-lg-12">
-                <div class="d-flex align-items-center justify-content-between">
-                    <h1 class="mb-3 text-start">
-                        <span style="color: var(--primary);">Trending</span> Destination
-                    </h1>
-                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
-                        Explore More
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-    <div class="row g-5 mt-3">
-        <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="20"
-            slides-per-view="3" autoplay-delay="3500" loop="true"
-            breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'>
-    
-            <swiper-slide>
-                <div class="card"
-                    style="background-image: url('img/Segiriya.jpeg'); background-size: cover; 
-                    background-position: center; width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">Sigiriya</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-    
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/argambay.jpeg') center/cover; 
-                    background-size: cover; background-position: center;width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">ArugamBay</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-
-    
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/Beach.jpeg') center/cover; background-size: cover; 
-                    background-position: center; width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">Hikkaduwa</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-    
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/Ella\ _\ Sri\ Lanka.jpeg') center/cover; background-size: cover; 
-                    background-position: center;width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">Ella</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/Sera_Ella.jpeg') center/cover; background-size: cover; 
-                    background-position: center;width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">Sera Ella</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/pagoda2.jpeg') center/cover; background-size: cover; 
-                    background-position: center;width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;" class="card-title">Katharagama</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-
-            <swiper-slide>
-                <div class="card"
-                    style="background: url('img/pagoda.jpeg') center/cover; background-size: cover; 
-                    background-position: center;width: 350px; height: 500px;">
-                    <div class="card-body">
-                        <h5 style="color: white;"  class="card-title">Anuradhapura</h5>
-                        <p class="card-text">150+ Tours</p>
-                        <p class="card-text">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
-    
-        </swiper-container>
-    </div>
-    
-    </div>
-</div>
-
-<!-- Places card area end -->
-
-
-<hr>
-<!-- Why Choose us start -->
-
-<div class="container-xxl py-5">
-    <div class="container">
-
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center mb-3">
-                    <div>
-                        <h1 class="mb-3"><span style="color: var(--primary);">Why</span> Choose Lanka Discoveries?</h1>
-                        <p class="mb-2">One of the best ways to travel is by recommendations from local experts. For example,
-                            only a Melbourne local would know the best local coffee in town, or only a Sydney local would know
-                            the best lookout point to see the Harbour Bridge and Opera House. At Olanka Travels, we’re here to
-                            help you go on your dream vacation by connecting you with our local destination experts.</p>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center">
-                    <img src="img/Segiriya.jpeg"  class="shadow" style="width: 600px;height: 400px;border-radius: 15px;" alt="">
-                </div>
-            </div>
-        
-            <!-- Decreased space above the button -->
-            <div class="text-left mt-2">
-                <a  class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
-                    Our Story
-                </a>
-            </div>
-        </div>
-
-        
-
-    <div class="row g-5 mt-4">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex justify-content-center align-items-end me-3">
-                    <i class="fa-solid fa-plane fa-2xl" style="color: #426ceb;"></i>
-    
-                </div>
-                <div>
-                    <h1 class="mb-4"><span style="color: var(--primary);">100% Tailor-Made</span> Travel Plan</h1>
-                    <p class="mb-4">Our dedicated destination experts will create customised private or group tours to match
-                        your needs, and offer unlimited
-                        changes to your travel plans.</p>
-                </div>
-            </div>
-        </div>
-    
-    
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex justify-content-center align-items-end me-3">
-                    <i class="fa-solid fa-money-check-dollar fa-2xl" style="color: #426ceb;"></i>
-                </div>
-                <div>
-                    <h1 class="mb-4"><span style="color: var(--primary);">One Stop Shop</span>for All Your Holiday Needs
-                    </h1>
-                    <p class="mb-4">Our consultants are happy to help you with your tours, accommodation, activities, flight
-                        tickets, and Visas, no matter
-                        where your trip takes you.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row g-5">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex justify-content-center align-items-end me-3">
-                    <i class="fa-solid fa-headset fa-2xl" style="color: #426ceb;"></i>
-                </div>
-                <div>
-                    <h1 class="mb-4"><span style="color: var(--primary);">24/7</span> Prompt Customer Support</h1>
-                    <p class="mb-4">We will provide customer support anytime - day or night, for any issue. We aim to
-                        provide swift solutions to your needs.</p>
-                </div>
-            </div>
-        </div>
-    
-    
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-4">
-                <div class="d-flex justify-content-center align-items-end me-3">
-                    <i class="fa-solid fa-calendar-days fa-2xl" style="color: #426ceb;"></i>
-                </div>
-                <div>
-                    <h1 class="mb-4"><span style="color: var(--primary);">Multiple Trip</span> Options To Select From
-                    </h1>
-                    <p class="mb-4">We will provide a selection of 3 different tour
-                        types to suit your preferences. You can select from a fully tailor-made
-                        private tour, fixed offers, or small group travels.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-        <!--Hidden on Page Load (Remaining Rows) -->
-        <div id="extraContent" class="d-none">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">200+</span> Global Staff</h1>
-                            <p class="mb-4">Our staff is well trained, professional, and courteous, with extensive destination
-                                knowledge. Support is always
-                                available both globally and locally.</p>
-                        </div>
-                    </div>
-                </div>
-            
-            
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-mobile-screen-button fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">Updated</span> Prompt Customer Support</h1>
-                            <p class="mb-4">We use the latest technology to ensure your trip is perfect through online
-                                trip management, a mobile app, with features
-                                such as express check-in.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-business-time fa-beat-fade fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">Friendly Booking</span> Terms & Friendly
-                                Cancellations</h1>
-                            <p class="mb-4">At Olanka Travels, a 20% down payment secures your tour to any country, except for
-                                Maldives. Flexible payments and
-                                friendly cancellations are also available.</p>
-                        </div>
-                    </div>
-                </div>
-            
-            
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-earth-americas fa-beat-fade fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">Global</span> Suppliers</h1>
-                            <p class="mb-4">Olanka Travels only develops partnerships with carefully vetted vendors who meet high
-                                standards for your tour so you can
-                                focus on enjoyment.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-baht-sign fa-beat-fade fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">Multiple</span> Payment Options</h1>
-                            <p class="mb-4">Experience multiple currencies and global payment options. We accept all major cards,
-                                including Apple Pay, Google Pay,
-                                WeChat, and AliPay, while offering secure bank transfers.</p>
-                        </div>
-                    </div>
-                </div>
-            
-            
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="d-flex justify-content-center align-items-end me-3">
-                            <i class="fa-solid fa-umbrella fa-beat-fade fa-2xl" style="color: #426ceb;"></i>
-                        </div>
-                        <div>
-                            <h1 class="mb-4"><span style="color: rgb(11, 106, 214);">10,000+</span> Happy Customers</h1>
-                            <p class="mb-4">Our online independent reviews show you why travellers trust us with their holiday
-                                planning.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Show More / Show Less Button -->
+    <!-- Stepper Area  start-->
+    <div class="container my-5 shadow" style="background-color: var(--light); padding: 40px; border-radius: 10px;">
         <div class="text-center">
-            <a id="toggleButton" class="btn rounded-pill py-2 px-4"
-                style="background-color: rgb(8, 8, 8); color: white;">
-                Show More
-            </a>
+            <h2><strong>How</strong> It Works</h2>
+            <div class="row mt-4 position-relative justify-content-center">
+                <div class="col-md-3 text-center step-container">
+                    <span style="font-weight: bold;">01</span>
+                    <div
+                        style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </div>
+                    <p style="font-weight: bold; margin-top: 10px;">Submit Your Details</p>
+                </div>
+
+                <div class="col-md-3 text-center step-container">
+                    <span style="font-weight: bold;">02</span>
+                    <div
+                        style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <p style="font-weight: bold; margin-top: 10px;">Connect with a Local Expert Online</p>
+                </div>
+
+                <div class="col-md-3 text-center step-container">
+                    <span style="font-weight: bold;">03</span>
+                    <div
+                        style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                        <i class="fas fa-file-alt fa-2x"></i>
+                    </div>
+                    <p style="font-weight: bold; margin-top: 10px;">Receive 3 Personalized Travel Quotes</p>
+                </div>
+
+                <div class="col-md-3 text-center step-container">
+                    <span style="font-weight: bold;">04</span>
+                    <div
+                        style="width: 90px; height: 90px; background-color: var(--accent); color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 24px; margin: auto;">
+                        <i class="fas fa-suitcase fa-2x"></i>
+                    </div>
+                    <p style="font-weight: bold; margin-top: 10px;">Secure Your Booking</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Why Choose us end -->
+    <!-- Stepper Area  end-->
 
-<hr>
+    <hr>
 
-<!-- Our Success start -->
+    <!-- Places card area start -->
 
-<div class="container-xxl py-5">
-    <div class="container">
+    <div class="container-xxl py-5">
+        <div class="container">
 
-        <div class="row g-5">
-            <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="d-flex align-items-center mb-3">
-                    <div>
-                        <h1 class="mb-3"><span style="color: rgb(11, 106, 214);">Our</span> Success
+            <div class="row g-5">
+                <div class="col-lg-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h1 class="mb-3 text-start">
+                            <span style="color: var(--primary);">Trending</span> Destination
                         </h1>
-                        <p class="mb-2">We are pleased to have helped over ten thousand clients since 2010, and our 
-                            destination experts love seeing happy travellers!</p>
+                        <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                            Explore More
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Decreased space above the button -->
-            <div class="text-left mt-2">
-                <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
-                    Read More
+
+            <div class="row g-5 mt-3">
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="20"
+                    slides-per-view="3" autoplay-delay="3500" loop="true"
+                    breakpoints='{"320": {"slidesPerView": 1}, "768": {"slidesPerView": 2}, "1024": {"slidesPerView": 3}}'>
+
+                    <swiper-slide>
+                        <div class="card" style="background-image: url('img/Segiriya.jpeg'); background-size: cover; 
+                    background-position: center; width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Sigiriya</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/argambay.jpeg') center/cover; 
+                    background-size: cover; background-position: center;width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">ArugamBay</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/Beach.jpeg') center/cover; background-size: cover; 
+                    background-position: center; width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Hikkaduwa</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/Ella\ _\ Sri\ Lanka.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Ella</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/Sera_Ella.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Sera Ella</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/pagoda2.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Katharagama</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                    <swiper-slide>
+                        <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover; 
+                    background-position: center;width: 350px; height: 500px;">
+                            <div class="card-body">
+                                <h5 style="color: white;" class="card-title">Anuradhapura</h5>
+                                <p class="card-text">150+ Tours</p>
+                                <p class="card-text">40+ Hotels</p>
+                            </div>
+                        </div>
+                    </swiper-slide>
+
+                </swiper-container>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Places card area end -->
+
+
+    <hr>
+    <!-- Why Choose us start -->
+
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-3">
+                        <div>
+                            <h1 class="mb-3"><span style="color: var(--primary);">Why</span> Choose Lanka Discoveries?
+                            </h1>
+                            <p class="mb-2">One of the best ways to travel is by recommendations from local experts. For
+                                example,
+                                only a Melbourne local would know the best local coffee in town, or only a Sydney local
+                                would know
+                                the best lookout point to see the Harbour Bridge and Opera House. At Lanka Discoveries,
+                                we’re here to
+                                help you go on your dream vacation by connecting you with our local destination experts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center">
+                        <img src="img/Segiriya.jpeg" class="shadow"
+                            style="width: 600px;height: 400px;border-radius: 15px;" alt="">
+                    </div>
+                </div>
+
+                <!-- Decreased space above the button -->
+                <div class="text-left mt-2">
+                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                        Our Story
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="row g-5 mt-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex justify-content-center align-items-end me-3">
+                            <i class="fa-solid fa-plane fa-2xl" style="color: var(--primary);"></i>
+
+                        </div>
+                        <div>
+                            <h1 class="mb-4"><span style="color: var(--primary);">100% Tailor-Made</span> Travel Plan
+                            </h1>
+                            <p class="mb-4">Our dedicated destination experts will create customised private or group
+                                tours to match
+                                your needs, and offer unlimited
+                                changes to your travel plans.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex justify-content-center align-items-end me-3">
+                            <i class="fa-solid fa-money-check-dollar fa-2xl" style="color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h1 class="mb-4"><span style="color: var(--primary);">One Stop Shop</span>for All Your
+                                Holiday Needs
+                            </h1>
+                            <p class="mb-4">Our consultants are happy to help you with your tours, accommodation,
+                                activities, flight
+                                tickets, and Visas, no matter
+                                where your trip takes you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex justify-content-center align-items-end me-3">
+                            <i class="fa-solid fa-headset fa-2xl" style="color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h1 class="mb-4"><span style="color: var(--primary);">24/7</span> Prompt Customer Support
+                            </h1>
+                            <p class="mb-4">We will provide customer support anytime - day or night, for any issue. We
+                                aim to
+                                provide swift solutions to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="d-flex justify-content-center align-items-end me-3">
+                            <i class="fa-solid fa-calendar-days fa-2xl" style="color: var(--primary);"></i>
+                        </div>
+                        <div>
+                            <h1 class="mb-4"><span style="color: var(--primary);">Multiple Trip</span> Options To Select
+                                From
+                            </h1>
+                            <p class="mb-4">We will provide a selection of 3 different tour
+                                types to suit your preferences. You can select from a fully tailor-made
+                                private tour, fixed offers, or small group travels.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Hidden on Page Load (Remaining Rows) -->
+            <div id="extraContent" class="d-none">
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-umbrella-beach fa-2xl" style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">200+</span> Global Staff</h1>
+                                <p class="mb-4">Our staff is well trained, professional, and courteous, with extensive
+                                    destination
+                                    knowledge. Support is always
+                                    available both globally and locally.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-mobile-screen-button fa-2xl" style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">Updated</span> Prompt Customer
+                                    Support</h1>
+                                <p class="mb-4">We use the latest technology to ensure your trip is perfect through
+                                    online
+                                    trip management, a mobile app, with features
+                                    such as express check-in.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-business-time fa-beat-fade fa-2xl"
+                                    style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">Friendly Booking</span> Terms &
+                                    Friendly
+                                    Cancellations</h1>
+                                <p class="mb-4">At Lanka Discoveries, a 20% down payment secures your tour to any
+                                    country, except for
+                                    Maldives. Flexible payments and
+                                    friendly cancellations are also available.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-earth-americas fa-beat-fade fa-2xl"
+                                    style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">Global</span> Suppliers</h1>
+                                <p class="mb-4">Lanka Discoveries only develops partnerships with carefully vetted
+                                    vendors who meet high
+                                    standards for your tour so you can
+                                    focus on enjoyment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-5">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-baht-sign fa-beat-fade fa-2xl" style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">Multiple</span> Payment Options
+                                </h1>
+                                <p class="mb-4">Experience multiple currencies and global payment options. We accept all
+                                    major cards,
+                                    including Apple Pay, Google Pay,
+                                    WeChat, and AliPay, while offering secure bank transfers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="d-flex justify-content-center align-items-end me-3">
+                                <i class="fa-solid fa-umbrella fa-beat-fade fa-2xl" style="color: var(--primary);"></i>
+                            </div>
+                            <div>
+                                <h1 class="mb-4"><span style="color: var(--primary);">10,000+</span> Happy Customers
+                                </h1>
+                                <p class="mb-4">Our online independent reviews show you why travellers trust us with
+                                    their holiday
+                                    planning.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show More / Show Less Button -->
+            <div class="text-center">
+                <a id="toggleButton" class="btn rounded-pill py-2 px-4"
+                    style="background-color: rgb(8, 8, 8); color: white;">
+                    Show More
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="row g-5 mt-4">
-            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="row no-gutters justify-content-center">
-        
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-                        <div class="count-box text-center"
-                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-        
-                            <i class="bi bi-journal-richtext" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-        
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100"
-                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-        
-                            <p style="font-size: 18px; margin-top: 5px;"><strong>Destination Experts</strong></p>
+    <!-- Why Choose us end -->
+
+    <hr>
+
+    <!-- Our Success start -->
+
+    <div class="container-xxl py-5">
+        <div class="container">
+
+            <div class="row g-5">
+                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-3">
+                        <div>
+                            <h1 class="mb-3"><span style="color: var(--primary);">Our</span> Success
+                            </h1>
+                            <p class="mb-2">We are pleased to have helped over ten thousand clients since 2010, and our
+                                destination experts love seeing happy travellers!</p>
                         </div>
                     </div>
-        
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                        <div class="count-box text-center"
-                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-                            <i class="bi bi-headset" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20"
-                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-                            <p style="font-size: 18px; margin-top: 5px;"><strong>Destinations</strong></p>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-                        <div class="count-box text-center"
-                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-        
-                            <i class="bi bi-people" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-        
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
-                                data-purecounter-duration="1" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-        
-                            <p style="font-size: 18px; margin-top: 5px;"><strong>Different Tours</strong></p>
-                        </div>
-                    </div>
-        
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-                        <div class="count-box text-center"
-                            style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
-        
-                            <i class="bi bi-emoji-smile" style="font-size: 50px; color: #007bff; margin-bottom: 10px;"></i>
-        
-                            <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10000"
-                                data-purecounter-duration="2" style="font-size: 30px; font-weight: bold; color: #333;"></span>
-        
-                            <p style="font-size: 18px; margin-top: 5px;"><strong>Trusted Customers</strong></p>
-                        </div>
-                    </div>
-        
+                </div>
+
+                <!-- Decreased space above the button -->
+                <div class="text-left mt-2">
+                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                        Read More
+                    </a>
                 </div>
             </div>
-        </div>
-   
-         <div class="row g-5 mt-3">
-        <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="d-flex align-items-center mb-3">
-                <div>
-                    <h1 class="mb-3"><span style="color: rgb(11, 106, 214);">People</span> Say</h1>
-                    <p class="mb-2">Check out what our clients loved about their vacations.
-                        Collected via their online reviews and success stories</p>
-                    <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
-                        Success Stories
-                    </a>
 
-                    <!-- Count-boxes for the Stats -->
-                    <div class="row g-4 mt-4 justify-content-bottom">
-                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-5 mt-4">
+                <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="row no-gutters justify-content-center">
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="100">
                             <div class="count-box text-center"
-                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
-    
+                                style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+
                                 <i class="bi bi-journal-richtext"
-                                    style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
-    
+                                    style="font-size: 50px; color: var(--primary); margin-bottom: 10px;"></i>
+
                                 <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100"
                                     data-purecounter-duration="2"
-                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
-    
-                                <p style="font-size: 16px; margin-top: 5px;"><strong>Destination Experts</strong></p>
+                                    style="font-size: 30px; font-weight: bold; color: #333;"></span>
+
+                                <p style="font-size: 18px; margin-top: 5px;"><strong>Destination Experts</strong></p>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="200">
                             <div class="count-box text-center"
-                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
-    
-                                <i class="bi bi-people" style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
-    
+                                style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+                                <i class="bi bi-headset"
+                                    style="font-size: 50px; color: var(--primary); margin-bottom: 10px;"></i>
+                                <span class="purecounter" data-purecounter-start="0" data-purecounter-end="20"
+                                    data-purecounter-duration="2"
+                                    style="font-size: 30px; font-weight: bold; color: #333;"></span>
+                                <p style="font-size: 18px; margin-top: 5px;"><strong>Destinations</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="300">
+                            <div class="count-box text-center"
+                                style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+
+                                <i class="bi bi-people"
+                                    style="font-size: 50px; color: var(--primary); margin-bottom: 10px;"></i>
+
                                 <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
                                     data-purecounter-duration="1"
-                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
-    
-                                <p style="font-size: 16px; margin-top: 5px;"><strong>Different Tours</strong></p>
+                                    style="font-size: 30px; font-weight: bold; color: #333;"></span>
+
+                                <p style="font-size: 18px; margin-top: 5px;"><strong>Different Tours</strong></p>
                             </div>
                         </div>
-    
-                        <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+
+                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                            data-aos-delay="400">
                             <div class="count-box text-center"
-                                style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
-    
+                                style="background: #f8f9fa; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 250px; margin: auto;">
+
                                 <i class="bi bi-emoji-smile"
-                                    style="font-size: 40px; color: #007bff; margin-bottom: 10px;"></i>
-    
+                                    style="font-size: 50px; color: var(--primary); margin-bottom: 10px;"></i>
+
                                 <span class="purecounter" data-purecounter-start="0" data-purecounter-end="10000"
                                     data-purecounter-duration="2"
-                                    style="font-size: 26px; font-weight: bold; color: #333;"></span>
-    
-                                <p style="font-size: 16px; margin-top: 5px;"><strong>Trusted Customers</strong></p>
+                                    style="font-size: 30px; font-weight: bold; color: #333;"></span>
+
+                                <p style="font-size: 18px; margin-top: 5px;"><strong>Trusted Customers</strong></p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <!-- Image Section -->
-    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="d-flex align-items-center">
-    <swiper-container class="mySwiper" style="width: 100%; height: 800px;"
-        autoplay="true" 
-    a   utoplay-delay="5000"
-        loop="true" 
-        space-between="30" 
-        slides-per-view="1" 
-        effect="slide">
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
-                                background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
+            <div class="row g-5 mt-3">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-3">
+                        <div>
+                            <h1 class="mb-3"><span style="color: var(--primary);">People</span> Say</h1>
+                            <p class="mb-2">Check out what our clients loved about their vacations.
+                                Collected via their online reviews and success stories</p>
+                            <a class="btn rounded-pill py-2 px-4" style="background-color: rgb(8, 8, 8); color: white;">
+                                Success Stories
+                            </a>
+
+                            <!-- Count-boxes for the Stats -->
+                            <div class="row g-4 mt-4 justify-content-bottom">
+                                <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                                    data-aos-delay="100">
+                                    <div class="count-box text-center"
+                                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+
+                                        <i class="bi bi-journal-richtext"
+                                            style="font-size: 40px; color: var(--primary); margin-bottom: 10px;"></i>
+
+                                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="100"
+                                            data-purecounter-duration="2"
+                                            style="font-size: 26px; font-weight: bold; color: #333;"></span>
+
+                                        <p style="font-size: 16px; margin-top: 5px;"><strong>Destination
+                                                Experts</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                                    data-aos-delay="300">
+                                    <div class="count-box text-center"
+                                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+
+                                        <i class="bi bi-people"
+                                            style="font-size: 40px; color: var(--primary); margin-bottom: 10px;"></i>
+
+                                        <span class="purecounter" data-purecounter-start="0" data-purecounter-end="150"
+                                            data-purecounter-duration="1"
+                                            style="font-size: 26px; font-weight: bold; color: #333;"></span>
+
+                                        <p style="font-size: 16px; margin-top: 5px;"><strong>Different Tours</strong>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="fade-up"
+                                    data-aos-delay="400">
+                                    <div class="count-box text-center"
+                                        style="background: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); width: 100%; max-width: 200px; margin: auto;">
+
+                                        <i class="bi bi-emoji-smile"
+                                            style="font-size: 40px; color: var(--primary); margin-bottom: 10px;"></i>
+
+                                        <span class="purecounter" data-purecounter-start="0"
+                                            data-purecounter-end="10000" data-purecounter-duration="2"
+                                            style="font-size: 26px; font-weight: bold; color: #333;"></span>
+
+                                        <p style="font-size: 16px; margin-top: 5px;"><strong>Trusted Customers</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </swiper-slide>
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                <!-- Image Section -->
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center">
+                        <swiper-container class="mySwiper" style="width: 100%; height: 800px;" autoplay="true" a
+                            utoplay-delay="5000" loop="true" space-between="30" slides-per-view="1" effect="slide">
+
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                                background-position: center; width: 100%; height: 100%; margin: auto;">
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
                                             background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
                                 background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
                                 background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
                                 background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
-                    </div>
-                </div>
-            </swiper-slide>
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
 
-            <swiper-slide>
-                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
+                            <swiper-slide>
+                                <div class="card" style="background: url('img/pagoda.jpeg') center/cover; background-size: cover;
                                             background-position: center; width: 100%; height: 100%; margin: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
-                        <p class="card-text" style="color: white;">150+ Tours</p>
-                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    <div class="card-body">
+                                        <h5 class="card-title" style="color: white;">Anuradhapura</h5>
+                                        <p class="card-text" style="color: white;">150+ Tours</p>
+                                        <p class="card-text" style="color: white;">40+ Hotels</p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+
+                        </swiper-container>
                     </div>
                 </div>
-            </swiper-slide>
 
-            </swiper-container>
+            </div>
+
         </div>
     </div>
 
-        </div>
-
-    </div>
-</div>
-
-<!-- Awesome Packages start -->
+    <!-- Awesome Packages start -->
     <!-- <div style="background-color: #f6f6f6;">
         <div class="container py-5 wow fadeInUp">
             <div class="text-center mb-5">
-                <h6 style="color: #007bff; font-weight: bold;">Packages</h6>
+                <h6 style="color: var(--primary); font-weight: bold;">Packages</h6>
                 <h1>Awesome Packages</h1>
             </div>
             <div class="row g-4 justify-content-center">
@@ -1022,10 +1064,10 @@
             </div>
         </div>
     </div> -->
-<!-- Awesome Packages End -->
+    <!-- Awesome Packages End -->
 
     <!-- Booking Start -->
-     <br />
+    <br />
     <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="booking p-5 shadow" style="border-radius: 15px;">
@@ -1143,7 +1185,8 @@
                     <div class="col-md-6 text-dark">
                         <h6 class=" text-uppercase" style="color: #f4fbf5;font-size: larger;">Get a Quote</h6>
                         <h1 class="text-white mb-4">Online Reservation</h1>
-                        <p class="mb-4 text-white">Plan your trip with ease. Book a tour, select your hotel, and enjoy seamless travel arrangements.</p>
+                        <p class="mb-4 text-white">Plan your trip with ease. Book a tour, select your hotel, and enjoy
+                            seamless travel arrangements.</p>
                     </div>
                     <div class="col-md-6">
                         <h1 class="mb-4" style="color:#f6f6f6;">Book A Tour</h1>
@@ -1151,18 +1194,20 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating rounded">
-                                        <input type="text" class="form-control" style="border-radius: 14px;" id="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="name"
+                                            placeholder="Your Name">
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" style="border-radius: 14px;" id="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" style="border-radius: 14px;" id="email"
+                                            placeholder="Your Email">
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating" >
+                                    <div class="form-floating">
                                         <select class="form-select" style="border-radius: 14px;" id="hotel_type">
                                             <option value="">Select Hotel Type</option>
                                             <option>3 Star</option>
@@ -1173,77 +1218,83 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating" >
-                                        <input type="text" class="form-control" style="border-radius: 14px;" id="from" placeholder="I'm from">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" style="border-radius: 14px;" id="from"
+                                            placeholder="I'm from">
                                         <label for="from">I'm from</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-floating" >
-                                        <input type="number" class="form-control" style="border-radius: 14px;" id="nights" placeholder="No of Nights">
+                                    <div class="form-floating">
+                                        <input type="number" class="form-control" style="border-radius: 14px;"
+                                            id="nights" placeholder="No of Nights">
                                         <label for="nights">No of Nights</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="dropdown" style="background-color: #fff; width: 100%; height: 100%;padding-top: 0px; border-radius: 14px;">
+                                    <div class="dropdown"
+                                        style="background-color: #fff; width: 100%; height: 100%;padding-top: 0px; border-radius: 14px;">
                                         <small id="location_label"></small> <br />
                                         <span id="selectedFruits"></span>
                                         <div class="dropdown-content">
-                                          <label><input type="checkbox" name="Kandy" value="Kandy"> Kandy</label>
-                                          <label><input type="checkbox" name="Matale" value="Matale"> Matale</label>
-                                          <label><input type="checkbox" name="Ella" value="Ella"> Ella</label>
-                                          <label><input type="checkbox" name="Galle" value="Galle"> Galle</label>
+                                            <label><input type="checkbox" name="Kandy" value="Kandy"> Kandy</label>
+                                            <label><input type="checkbox" name="Matale" value="Matale"> Matale</label>
+                                            <label><input type="checkbox" name="Ella" value="Ella"> Ella</label>
+                                            <label><input type="checkbox" name="Galle" value="Galle"> Galle</label>
                                         </div>
-                                      </div>
-                                      
-                                      <script>
-                                        document.querySelector('.dropdown').addEventListener('click', function(event) {
-                                          this.classList.toggle('open');
-                                          event.stopPropagation();
+                                    </div>
+
+                                    <script>
+                                        document.querySelector('.dropdown').addEventListener('click', function (event) {
+                                            this.classList.toggle('open');
+                                            event.stopPropagation();
                                         });
                                         document.getElementById('selectedFruits').textContent = 'Select Location';
                                         // document.getElementById("location_label").addEventListener("click", function() {
                                         //     this.style.backgroundColor = "green";
                                         //     document.getElementById("location_label").classList.toggle('active')
                                         // });
-                                      
-                                        document.addEventListener('click', function(event) {
-                                          document.querySelector('.dropdown').classList.remove('open');
+
+                                        document.addEventListener('click', function (event) {
+                                            document.querySelector('.dropdown').classList.remove('open');
                                         });
-                                      
+
                                         function updateSelectedFruits() {
-                                          var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
-                                          var selectedFruits = [];
-                                          checkboxes.forEach(function(checkbox) {
-                                            if (checkbox.checked) {
-                                              selectedFruits.push(checkbox.value);
+                                            var checkboxes = document.querySelectorAll('.dropdown-content input[type="checkbox"]');
+                                            var selectedFruits = [];
+                                            checkboxes.forEach(function (checkbox) {
+                                                if (checkbox.checked) {
+                                                    selectedFruits.push(checkbox.value);
+                                                }
+                                            });
+                                            var displayText = (selectedFruits.length > 0) ? selectedFruits.join(', ') : 'Select Locations';
+                                            document.getElementById('selectedFruits').textContent = displayText;
+                                            if (selectedFruits.length === 0) {
+                                                document.getElementById('location_label').textContent = '';
+                                            } else {
+                                                document.getElementById('location_label').textContent = 'Select Location';
                                             }
-                                          });
-                                          var displayText = (selectedFruits.length > 0) ?  selectedFruits.join(', ') : 'Select Locations';
-                                          document.getElementById('selectedFruits').textContent = displayText;
-                                          if (selectedFruits.length === 0) {
-                                            document.getElementById('location_label').textContent = '';
-                                          } else {
-                                            document.getElementById('location_label').textContent = 'Select Location';
-                                          }
-                                          
+
                                         }
-                                      
-                                        document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(function(checkbox) {
-                                          checkbox.addEventListener('change', updateSelectedFruits);
-                                          
+
+                                        document.querySelectorAll('.dropdown-content input[type="checkbox"]').forEach(function (checkbox) {
+                                            checkbox.addEventListener('change', updateSelectedFruits);
+
                                         });
-                                      </script>
+                                    </script>
                                 </div>
                                 <div class="col-12">
-                                    <div class="form-floating" >
-                                        <textarea class="form-control"  style="border-radius: 14px;height:150px" id="message" placeholder="Special Request" style="height: 100px;"></textarea>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" style="border-radius: 14px;height:150px"
+                                            id="message" placeholder="Special Request"
+                                            style="height: 100px;"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" 
-                                    style="background-color: #0B6AD6;border-radius: 50rem;" type="submit">Submit</button>
+                                    <button class="btn btn-primary w-100 py-3"
+                                        style="background-color: #0B6AD6;border-radius: 50rem;"
+                                        type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -1252,7 +1303,7 @@
             </div>
         </div>
     </div>
-    
+
 
     <!-- Booking Start -->
 
@@ -1441,7 +1492,7 @@
                 <div class="col-lg-4 col-md-4">
                     <h4 class="text-dark mb-3">Lanka Discoveries</h4>
                     <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                   
+
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <h4 class="text-dark mb-3">Links</h4>
@@ -1463,8 +1514,8 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-               
-                
+
+
             </div>
         </div>
         <hr />
@@ -1472,7 +1523,8 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#" style="color: #000;">Lanka Discoveries</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#" style="color: #000;">Lanka Discoveries</a>, All Right
+                        Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                         <!-- Designed By <a class="border-bottom" href="https://htmlcodex.com">d</a> -->
@@ -1493,12 +1545,13 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #0b6ad6;"><i class="bi bi-arrow-up" style="color: #fff;border-radius: 15px;"></i></a>
+    <a href="#" class="btn btn-lg btn-lg-square back-to-top" style="background-color: #0b6ad6;"><i
+            class="bi bi-arrow-up" style="color: #fff;border-radius: 15px;"></i></a>
 
 
     <!-- JavaScript Libraries -->
 
-    
+
 
 
 
@@ -1538,119 +1591,119 @@
 
 
 
-    // multiple select 
-    // Store selected options
-    let selectedValues = [];
+        // multiple select 
+        // Store selected options
+        let selectedValues = [];
 
-    // Function to handle option selection
-    function toggleOption(option) {
-      const value = option.dataset.value;
-      console.log(value)
-      const index = selectedValues.indexOf(value);
-      if (index > -1) {
-        // Remove from selected values if already selected
-        selectedValues.splice(index, 1);
-        option.style.backgroundColor = '#f0f0f0'; // Reset background color
-      } else {
-        // Add to selected values
-        selectedValues.push(value);
-        option.style.backgroundColor = '#f6f6f6'; // Set background color for selected
-        option.style.color = '#000'; 
-      }
-      updateSelectedOptions();
-      closeDropdown(); // Close dropdown after selecting an option
-    }
-
-    // Update the selected options display
-    function updateSelectedOptions() {
-  const selectedContainer = document.getElementById('selectedOptions');
-  selectedContainer.innerHTML = '';
-  selectedValues.forEach(value => {
-    const span = document.createElement('span');
-   
-   
-   
-    // Create another span for the value (e.g., Option 1, Option 2, etc.)
-    const valueText = document.createElement('span');
-    valueText.textContent = `${value} `;
-
-     // Create a span for the "Option" word and set its color to red
-     const optionText = document.createElement('span');
-    optionText.textContent = 'X';
-    optionText.style.color = 'red';  // Set the "Option" word to red
-   
-    // Append both spans
-   
-    span.appendChild(valueText);
-    span.appendChild(optionText);
-   
-    span.style.display = 'inline-block';
-    span.style.padding = '5px';
-    span.style.backgroundColor = '#007bff';
-    span.style.color = 'white';  // Keep the value part white
-    span.style.borderRadius = '4px';
-    span.style.margin = '2px';
-    span.style.cursor = 'pointer';
-    span.onclick = () => removeSelectedOption(value);
-    selectedContainer.appendChild(span);
-  });
-}
-    // Remove a selected option
-    function removeSelectedOption(value) {
-      selectedValues = selectedValues.filter(val => val !== value);
-      updateSelectedOptions();
-      const option = document.querySelector(`.multi-select-option[data-value='${value}']`);
-      option.style.backgroundColor = '#f0f0f0'; // Reset background color
-    }
-
-    // Function to filter options based on search input
-    function filterOptions() {
-      const searchQuery = document.getElementById('multiSearch').value.toLowerCase();
-      const options = document.querySelectorAll('.multi-select-option');
-      options.forEach(option => {
-        const text = option.textContent.toLowerCase();
-        if (text.includes(searchQuery)) {
-          option.style.display = 'block';
-        } else {
-          option.style.display = 'none';
+        // Function to handle option selection
+        function toggleOption(option) {
+            const value = option.dataset.value;
+            console.log(value)
+            const index = selectedValues.indexOf(value);
+            if (index > -1) {
+                // Remove from selected values if already selected
+                selectedValues.splice(index, 1);
+                option.style.backgroundColor = '#f0f0f0'; // Reset background color
+            } else {
+                // Add to selected values
+                selectedValues.push(value);
+                option.style.backgroundColor = '#f6f6f6'; // Set background color for selected
+                option.style.color = '#000';
+            }
+            updateSelectedOptions();
+            closeDropdown(); // Close dropdown after selecting an option
         }
-      });
-    }
 
-    // Function to toggle the dropdown visibility
-    function toggleDropdown() {
-      const dropdown = document.getElementById('optionsList');
-      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    }
+        // Update the selected options display
+        function updateSelectedOptions() {
+            const selectedContainer = document.getElementById('selectedOptions');
+            selectedContainer.innerHTML = '';
+            selectedValues.forEach(value => {
+                const span = document.createElement('span');
 
-    // Function to close the dropdown
-    function closeDropdown() {
-      const dropdown = document.getElementById('optionsList');
-      dropdown.style.display = 'none';
-    }
 
-    // Attach click event to each option
-    document.querySelectorAll('.multi-select-option').forEach(option => {
-      option.onclick = () => toggleOption(option);
-    });
 
-    // Close the dropdown if the user clicks anywhere outside of the dropdown
-    window.addEventListener('click', function (e) {
-      const dropdown = document.getElementById('optionsList');
-      const multiSelect = document.querySelector('.multi-select');
-      if (!multiSelect.contains(e.target)) {
-        closeDropdown();
-      }
-    });
-       
+                // Create another span for the value (e.g., Option 1, Option 2, etc.)
+                const valueText = document.createElement('span');
+                valueText.textContent = `${value} `;
+
+                // Create a span for the "Option" word and set its color to red
+                const optionText = document.createElement('span');
+                optionText.textContent = 'X';
+                optionText.style.color = 'red';  // Set the "Option" word to red
+
+                // Append both spans
+
+                span.appendChild(valueText);
+                span.appendChild(optionText);
+
+                span.style.display = 'inline-block';
+                span.style.padding = '5px';
+                span.style.backgroundColor = 'var(--primary)';
+                span.style.color = 'white';  // Keep the value part white
+                span.style.borderRadius = '4px';
+                span.style.margin = '2px';
+                span.style.cursor = 'pointer';
+                span.onclick = () => removeSelectedOption(value);
+                selectedContainer.appendChild(span);
+            });
+        }
+        // Remove a selected option
+        function removeSelectedOption(value) {
+            selectedValues = selectedValues.filter(val => val !== value);
+            updateSelectedOptions();
+            const option = document.querySelector(`.multi-select-option[data-value='${value}']`);
+            option.style.backgroundColor = '#f0f0f0'; // Reset background color
+        }
+
+        // Function to filter options based on search input
+        function filterOptions() {
+            const searchQuery = document.getElementById('multiSearch').value.toLowerCase();
+            const options = document.querySelectorAll('.multi-select-option');
+            options.forEach(option => {
+                const text = option.textContent.toLowerCase();
+                if (text.includes(searchQuery)) {
+                    option.style.display = 'block';
+                } else {
+                    option.style.display = 'none';
+                }
+            });
+        }
+
+        // Function to toggle the dropdown visibility
+        function toggleDropdown() {
+            const dropdown = document.getElementById('optionsList');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        // Function to close the dropdown
+        function closeDropdown() {
+            const dropdown = document.getElementById('optionsList');
+            dropdown.style.display = 'none';
+        }
+
+        // Attach click event to each option
+        document.querySelectorAll('.multi-select-option').forEach(option => {
+            option.onclick = () => toggleOption(option);
+        });
+
+        // Close the dropdown if the user clicks anywhere outside of the dropdown
+        window.addEventListener('click', function (e) {
+            const dropdown = document.getElementById('optionsList');
+            const multiSelect = document.querySelector('.multi-select');
+            if (!multiSelect.contains(e.target)) {
+                closeDropdown();
+            }
+        });
+
     </script>
-    
+
     <script>
         new PureCounter();
     </script>
 
 
-    
+
 </body>
 
 </html>
